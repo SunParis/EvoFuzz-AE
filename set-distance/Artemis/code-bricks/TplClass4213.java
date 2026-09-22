@@ -1,0 +1,15 @@
+public class TplClass4213 {
+
+    private static final void method() throws Throwable {
+        long a = 0x11;
+        long b = 0x22;
+        long c = 0x33;
+        long d = 0x44;
+        long e = 0x55;
+        long f = 0x66;
+        long g = 0x77;
+        long h = 0x88;
+        long result = ((a << 56) | (b << 48) | (c << 40) | (d << 32) | (e << 24) | (f << 16) | (g << 8) | h);
+    }
+}
+

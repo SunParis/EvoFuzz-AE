@@ -1,0 +1,4164 @@
+File:::: src/hotspot/share/opto/constantTable.hpp
+Function:::: ConstantTable::~ConstantTable()
+35
+File:::: src/hotspot/share/opto/phasetype.hpp
+Function:::: CompilerPhaseTypeHelper::to_string(CompilerPhaseType)
+79
+File:::: make/hotspot/src/hotspot/share/opto/vectornode.cpp
+Function:::: VectorNode::is_vector_shift(int)
+592
+File:::: make/hotspot/src/hotspot/share/opto/subtypenode.cpp
+Function:::: SubTypeCheckNode::Ideal(PhaseGVN*, bool)
+108->116->120->125->130->145->157
+Function:::: SubTypeCheckNode::sub(Type const*, Type const*) const
+36->90->94->105
+File:::: src/hotspot/share/opto/optoreg.hpp
+Function:::: OptoReg::reg2stack(int)
+91
+Function:::: OptoReg::is_stack(int)
+104
+Function:::: OptoReg::as_OptoReg(VMRegImpl*)
+148
+Function:::: OptoReg::stack0()
+0
+Function:::: OptoReg::as_VMReg(int)
+116
+Function:::: OptoReg::is_valid(int)
+108
+Function:::: OptoRegPair::second() const
+203
+Function:::: OptoReg::is_reg(int)
+112
+Function:::: OptoReg::as_VMReg(int, int, int)
+127->133
+Function:::: OptoReg::add(int, int)
+0
+0->81
+File:::: make/hotspot/src/hotspot/share/opto/buildOopMap.cpp
+Function:::: OopFlow::clone(OopFlow*, int)
+188
+Function:::: OopFlow::compute_reach(PhaseRegAlloc*, int, Dict*)
+113
+Function:::: OopFlow::build_oop_map(Node*, int, PhaseRegAlloc*, int*)
+211->216->217->222->232
+211->253->257
+211
+211->222
+211->221->222->232
+211->222->232
+211->217->222->232
+211->264->265
+Function:::: do_liveness(PhaseRegAlloc*, PhaseCFG*, Block_List*, int, Arena*, Dict*)
+411->545->557
+Function:::: get_live_bit(int*, int)
+203
+Function:::: PhaseOutput::BuildOopMaps()
+0->581->587
+0->588
+0->688
+0
+0->592
+0->608->612->621->628->636->637
+0->672->679
+0->636
+0->646->647->679
+Function:::: OopFlow::make(Arena*, int, Compile*)
+193->194->196->199
+Function:::: clr_live_bit(int*, int)
+207
+Function:::: set_live_bit(int*, int)
+205
+File:::: make/hotspot/src/hotspot/share/opto/domgraph.cpp
+Function:::: Block_Stack::last_successor()
+198
+Function:::: Block_Stack::push(unsigned int, Block*)
+0->186
+0
+Function:::: Tarjan::setdepth(unsigned int)
+326
+Function:::: Block_Stack::most_frequent_successor(Block*)
+214
+Function:::: PhaseCFG::build_dominator_tree()
+65->106->107->108->115->118->121->122->123->128->129->135->141->148->150->152
+Function:::: Tarjan::LINK(Tarjan*, Tarjan*)
+314->319
+Function:::: Block_Stack::is_nonempty()
+197
+Function:::: Tarjan::EVAL()
+298
+Function:::: Block_Stack::pop()
+196
+Function:::: Tarjan::COMPRESS()
+289
+Function:::: Block_Stack::next_successor()
+201
+Function:::: PhaseCFG::do_DFS(Tarjan*, unsigned int)
+257->267->269->272->278->280
+257->269->272->278->280
+File:::: make/hotspot/src/hotspot/share/opto/regalloc.cpp
+Function:::: PhaseRegAlloc::reg2offset(int) const
+85
+Function:::: PhaseRegAlloc::PhaseRegAlloc(unsigned int, PhaseCFG&, Matcher&, void (*)())
+46->55
+Function:::: PhaseRegAlloc::reg2offset_unchecked(int) const
+62->71
+Function:::: PhaseRegAlloc::alloc_node_regs(int)
+113->118->119
+File:::: make/hotspot/src/hotspot/share/opto/ifnode.cpp
+Function:::: IfNode::Ideal_common(PhaseGVN*, bool)
+1426->1449
+1426
+Function:::: IfProjNode::Identity(PhaseGVN*)
+1719->1731->1741->1745
+1719->1720->1731->1741->1745
+1719->1745
+Function:::: IfNode::Value(PhaseGVN*) const
+52
+Function:::: IfNode::Ideal(PhaseGVN*, bool)
+1455
+1455->1493
+File:::: make/hotspot/src/hotspot/share/opto/generateOptoStub.cpp
+Function:::: GraphKit::gen_stub(unsigned char*, char const*, int, bool, bool)
+49->245->250->251->254->255->259->264->265->274->275->279->303->304
+File:::: src/hotspot/share/opto/block.hpp
+Function:::: Block::loop_alignment() const
+273
+Function:::: CFGEdge::infrequent() const
+0
+Function:::: Block_Array::Block_Array(Arena*)
+61
+Function:::: Block_List::push(Block*)
+81
+Function:::: Trace::append(Trace*)
+871
+Function:::: Block::push_node(Node*)
+144
+Function:::: Block::number_of_nodes() const
+124
+Function:::: PhaseCFG::get_block(unsigned int) const
+566
+Function:::: Block_List::rpop()
+83
+Function:::: PhaseCFG::number_of_blocks() const
+571
+Function:::: Block::map_node(Node*, unsigned int)
+129
+Function:::: CFGEdge::from() const
+786
+Function:::: PhaseBlockLayout::trace(Block*)
+904
+Function:::: Block::remove_node(unsigned int)
+139
+Function:::: Block_Array::map(unsigned int, Block*)
+71
+Function:::: PhaseCFG::get_root_block() const
+543
+Function:::: Block::non_connector_successor(int) const
+352
+Function:::: PhaseCFG::add_block(Block*)
+554
+Function:::: Block::Block(Arena*, Node*)
+279->280->281->295
+Function:::: Trace::next(Block*) const
+810
+Function:::: Block_Array::Max() const
+72
+Function:::: Trace::first_block() const
+0->843
+0
+Function:::: Block_List::pop()
+82
+Function:::: CFGLoop::CFGLoop(int)
+716
+Function:::: PhaseCFG::has_block(Node const*) const
+591
+Function:::: PhaseCFG::unmap_node_from_block(Node const*)
+581
+Function:::: CFGEdge::state() const
+0
+Function:::: Block::get_node(unsigned int) const
+119
+Function:::: Block::pred(unsigned int) const
+161
+Function:::: CFGLoop::head()
+729
+Function:::: Trace::last_block() const
+846
+Function:::: CFGEdge::set_state(int)
+791
+Function:::: Block::num_preds() const
+160
+Function:::: Block::head() const
+156
+Function:::: CFGElement::CFGElement()
+97
+Function:::: Block_List::Block_List()
+80
+Function:::: Block::pop_node()
+149
+Function:::: UnionFind::map(unsigned int, unsigned int)
+670
+Function:::: Block::add_inst(Node*)
+316
+Function:::: Trace::id() const
+839
+Function:::: Trace::insert_after(Block*, Trace*)
+855
+Function:::: UnionFind::lookup(unsigned int) const
+664
+Function:::: Block_Array::lookup(unsigned int) const
+67
+Function:::: Block::has_loop_alignment() const
+274
+Function:::: Block::end_idx() const
+303->306
+Function:::: PhaseCFG::get_block_for_node(Node const*) const
+586
+Function:::: PhaseOutput::BuildOopMaps()
+0
+Function:::: Block_List::size() const
+86
+Function:::: Block::alignment_padding(int)
+240
+Function:::: Block::is_block()
+182
+Function:::: PhaseCFG::map_node_to_block(Node const*, Block*)
+0->576
+Function:::: Block::end() const
+312
+Function:::: PhaseCFG::get_latency_for_node(Node*)
+528
+Function:::: Block_Array::operator[](unsigned int) const
+69
+Function:::: Block::insert_node(Node*, unsigned int)
+134
+Function:::: UnionFind::Find(unsigned int)
+678
+Function:::: CFGLoop::add_member(CFGElement*)
+725
+File:::: make/hotspot/src/hotspot/share/opto/reg_split.cpp
+Function:::: clone_node(Node*, Block*, Compile*)
+313
+Function:::: PhaseChaitin::split_Rematerialize(Node*, Block*, unsigned int, unsigned int&, GrowableArray<unsigned int>, int, unsigned int*, Node**, bool)
+326
+Function:::: PhaseChaitin::split_USE(MachSpillCopyNode::SpillType, Node*, Block*, Node*, unsigned int, unsigned int, bool, bool, GrowableArray<unsigned int>, int)
+197
+Function:::: PhaseChaitin::insert_proj(Block*, unsigned int, Node*, unsigned int)
+0->109->110->112->115->130->131->133->134
+0->110->111->115->130->131->133->134
+0->110->112->115->130->131->133->134
+Function:::: PhaseChaitin::is_high_pressure(Block*, LRG*, unsigned int)
+441
+Function:::: PhaseChaitin::Split(unsigned int, ResourceArea*)
+0->821->826->886->889->906->910->911->913->918->922->924
+0->889->906->910->913->918->922->924->1188
+0->755
+0->520->522->523->525
+0->1054
+0->525->526
+0->1198
+0
+0->1198->1204->1205->1211->1213
+0->605->621->634
+0->918->922->924->1188
+0->1279
+0->755->763
+0->889->906->910->913->918->922->924
+0->510->520->522->523->525
+0->763
+0->663->664->685->721
+0->563
+0->663->685->721
+0->559
+0->957
+0->1191->1198->1204->1205->1211->1213
+0->1126->1137->1139->1142->1146->1188
+0->932
+0->1041->1054
+0->605->621->634->636
+0->1046
+0->1087->1094->1096
+0->1151->1162->1164->1171->1188
+0->1312->1321->1386->1410
+0->572
+0->1188
+0->1410->1412->1414->1456->1457
+0->1087->1089
+0->918->922->924
+0->1195->1198->1204->1205->1211->1213
+0->764->766
+0->951->952->955->957
+0->583
+0->551->552->553->554->557
+0->558
+0->1191->1198
+0->526
+0->889->906->910->913->1188
+Function:::: PhaseChaitin::split_DEF(Node*, Block*, int, unsigned int, Node**, Node**, GrowableArray<unsigned int>, int)
+158
+Function:::: PhaseChaitin::get_spillcopy_wide(MachSpillCopyNode::SpillType, Node*, Node*, unsigned int)
+63->82->83->85->99->100
+File:::: src/hotspot/share/opto/vectornode.hpp
+Function:::: VectorNode::is_vector_shift(Node*)
+104
+Function:::: LoadVectorNode::LoadVectorNode(Node*, Node*, Node*, TypePtr const*, TypeVect const*, LoadNode::ControlDependency)
+715
+File:::: make/hotspot/src/hotspot/share/opto/coalesce.cpp
+Function:::: PhaseConservativeCoalesce::update_ifg(unsigned int, unsigned int, IndexSet*, IndexSet*)
+606->633->641
+Function:::: record_bias(PhaseIFG const*, int, int)
+0
+Function:::: PhaseConservativeCoalesce::PhaseConservativeCoalesce(PhaseChaitin&)
+484
+Function:::: PhaseConservativeCoalesce::coalesce(Block*)
+813
+Function:::: PhaseConservativeCoalesce::verify()
+492
+Function:::: PhaseConservativeCoalesce::union_helper(Node*, Node*, unsigned int, unsigned int, Node*, Node*, Node*, Block*, unsigned int)
+497
+Function:::: PhaseConservativeCoalesce::copy_copy(Node*, Node*, Block*, unsigned int)
+656
+Function:::: PhaseAggressiveCoalesce::insert_copies(Matcher&)
+0
+Function:::: PhaseCoalesce::coalesce_driver()
+129->132->134
+Function:::: PhaseAggressiveCoalesce::coalesce(Block*)
+453->471->472->473->477->482
+File:::: make/hotspot/src/hotspot/share/opto/ifg.cpp
+Function:::: PhaseChaitin::assign_high_score_to_immediate_copies(Block*, Node*, LRG&, unsigned int, unsigned int)
+656
+656->668->669->671
+Function:::: PhaseChaitin::compute_entry_block_pressure(Block*)
+0->561->562->575
+Function:::: PhaseIFG::init(unsigned int)
+46
+Function:::: PhaseIFG::remove_node(unsigned int)
+0->149
+Function:::: PhaseChaitin::remove_bound_register_from_interfering_live_ranges(LRG&, IndexSet*, unsigned int&)
+696->753
+Function:::: PhaseChaitin::raise_pressure(Block*, LRG&, PhaseChaitin::Pressure&, PhaseChaitin::Pressure&)
+503
+Function:::: PhaseIFG::test_edge_sq(unsigned int, unsigned int) const
+109
+Function:::: PhaseChaitin::remove_interference_from_copy(Block*, unsigned int, unsigned int, IndexSet*, double, PhaseChaitin::Pressure&, PhaseChaitin::Pressure&)
+682
+Function:::: PhaseChaitin::compute_initial_block_pressure(Block*, IndexSet*, PhaseChaitin::Pressure&, PhaseChaitin::Pressure&, double)
+529
+Function:::: PhaseChaitin::compute_exit_block_pressure(Block*)
+586->595->598
+Function:::: PhaseChaitin::lower_pressure(Block*, unsigned int, LRG&, IndexSet*, PhaseChaitin::Pressure&, PhaseChaitin::Pressure&)
+446->452->453->454->463
+Function:::: PhaseChaitin::check_for_high_pressure_block(PhaseChaitin::Pressure&)
+801
+Function:::: PhaseIFG::add_edge(unsigned int, unsigned int)
+0->69
+Function:::: PhaseIFG::re_insert(unsigned int)
+0
+Function:::: PhaseIFG::SquareUp()
+0
+0->87->89
+0->90
+Function:::: PhaseChaitin::build_ifg_physical(ResourceArea*)
+0->904->905->907->917->920
+0->873->874->877
+0->927->928
+0->920
+0
+0->904->905->907->917->918->920
+0->902->904->907->909->917->920
+0->873->874
+0->928
+0->917->918->920
+0->870
+0->904->907->917->920
+0->933->934->935->952
+0->902->904->905->907->909->910->917->918->920
+0->902->904->907->909->917->918->920
+0->932->933->934->935
+0->902->904->905->907->909->917->918->920
+0->859
+0->933->934->935
+0->904->907->917->918->920
+0->884
+0->856->857->859
+0->856
+0->890->891->917->918->920
+0->902->904->905->907->909->917->920
+0->857->859
+Function:::: move_exception_node_up(Block*, unsigned int, unsigned int)
+0->484->485->489
+Function:::: first_nonphi_index(Block*)
+468->470->471
+Function:::: PhaseIFG::PhaseIFG(Arena*)
+42
+Function:::: PhaseIFG::effective_degree(unsigned int) const
+189
+Function:::: PhaseIFG::Compute_Effective_Degree()
+101->102->103
+Function:::: PhaseChaitin::interfere_with_live(unsigned int, IndexSet*)
+294
+294->298->300->304
+294->298->300->301->304
+Function:::: PhaseChaitin::build_ifg_virtual()
+0
+0->332->335->355->356
+0->332->335->355->356->368
+0->331
+0->332->335->341->345->351->355->356->368
+0->357->368
+0->332->335->341->345->351
+0->356->357->368
+0->351->355->356
+0->351->355->356->368
+Function:::: PhaseChaitin::remove_node_if_not_used(Block*, unsigned int, Node*, unsigned int, IndexSet*)
+607->609
+Function:::: PhaseChaitin::check_for_high_pressure_transition_at_fatproj(unsigned int&, unsigned int, LRG&, PhaseChaitin::Pressure&, int)
+0->642->643
+Function:::: PhaseChaitin::add_input_to_liveout(Block*, Node*, IndexSet*, double, PhaseChaitin::Pressure&, PhaseChaitin::Pressure&)
+764
+764->773->779->782->785
+764->767->768->773->779->782->785
+764->767->768->785
+Function:::: PhaseChaitin::adjust_high_pressure_index(Block*, unsigned int&, PhaseChaitin::Pressure&)
+811->818
+Function:::: LRG::compute_degree(LRG&) const
+177
+File:::: make/hotspot/src/hotspot/share/opto/lcm.cpp
+Function:::: PhaseCFG::needed_for_next_call(Block*, Node*, VectorSet&)
+804->805
+804->808
+804
+Function:::: PhaseCFG::call_catch_cleanup(Block*)
+1359->1360->1473
+Function:::: PhaseCFG::select(Block*, Node_List&, GrowableArray<int>&, VectorSet&, unsigned int, long*)
+512->524->526
+512->531->533->534->544->557->558->562->566->579
+512->608->616->620->624
+512->608->616->620->664
+512
+512->682
+512->669
+512->531->533->534->544
+512->514->515
+512->531->533->534->540
+Function:::: add_call_kills(MachProjNode*, RegMask&, char const*, bool)
+823
+823->828
+Function:::: PhaseCFG::sched_call(Block*, unsigned int, Node_List&, GrowableArray<int>&, MachCallNode*, VectorSet&)
+837
+837->849->853->855
+837->849->851->853->858->859
+837->849->853->858
+837->855->858->859->863->864
+837->849->851->853->858
+837->849->853->858->859->863->864->867
+837->937
+837->849->853->858->859
+837->874->879->880->891->925
+837->849->851->853->858->859->863->864->867
+837->849->851->853->855
+Function:::: PhaseCFG::adjust_register_pressure(Node*, Block*, long*, bool)
+0->691->763->764->765->767->771->775->781
+Function:::: PhaseCFG::schedule_local(Block*, GrowableArray<int>&, VectorSet&, long*)
+963->1163->1169->1182->1183->1187->1192->1199->1213->1239
+File:::: src/hotspot/share/opto/machnode.hpp
+Function:::: MachProjNode::MachProjNode(Node*, unsigned int, RegMask const&, unsigned int)
+735
+Function:::: MachProjNode::ideal_reg() const
+749
+Function:::: MachSpillCopyNode::MachSpillCopyNode(MachSpillCopyNode::SpillType, Node*, RegMask const&, RegMask const&)
+592
+Function:::: MachPrologNode::MachPrologNode()
+507
+Function:::: MachCallNode::tf() const
+894
+Function:::: MachProjNode::out_RegMask() const
+748
+Function:::: MachNode::MachNode()
+209
+Function:::: MachNopNode::MachNopNode()
+546
+Function:::: MachIdealNode::MachIdealNode()
+390
+Function:::: MachNode::may_be_short_branch() const
+237
+Function:::: MachNode::has_call() const
+250
+Function:::: MachNode::avoid_back_to_back(MachNode::AvoidBackToBackFlag) const
+246
+Function:::: MachNode::num_opnds() const
+0->280
+File:::: src/hotspot/share/opto/indexSet.hpp
+Function:::: IndexSet::is_empty() const
+266
+Function:::: IndexSet::remove(unsigned int)
+288->291
+Function:::: IndexSet::insert(unsigned int)
+276->282
+Function:::: IndexSetIterator::next_value()
+455
+Function:::: IndexSetIterator::next()
+464->467
+Function:::: IndexSet::BitBlock::next()
+120
+Function:::: IndexSetIterator::IndexSetIterator(IndexSet*)
+416->420
+Function:::: IndexSet::clear()
+261
+Function:::: IndexSet::member(unsigned int) const
+269
+Function:::: IndexSet::set_block(unsigned int, IndexSet::BitBlock*)
+238
+Function:::: IndexSet::get_block_containing(unsigned int) const
+0->233
+Function:::: IndexSet::BitBlock::insert(unsigned int)
+142
+Function:::: IndexSet::next()
+220
+Function:::: IndexSet::get_word_index(unsigned int)
+91
+File:::: make/hotspot/src/hotspot/share/opto/parse2.cpp
+Function:::: Parse::array_store(BasicType)
+80
+Function:::: Parse::do_if(BoolTest::mask, Node*)
+1447->1543->1546->1552->1554
+Function:::: Parse::adjust_map_after_if(BoolTest::mask, Node*, float, Parse::Block*)
+1583->1629
+1583->1623->1629
+1583->1584->1629
+Function:::: Parse::dynamic_branch_prediction(float&, BoolTest::mask, Node*)
+1210->1222->1224->1228->1231->1234->1238->1244->1252->1275->1288
+1210->1217->1222->1224->1228->1231->1234->1238->1244->1252->1264->1267->1275->1288
+1210->1222->1224->1228->1231->1234->1238->1244->1252->1264->1267->1275->1288
+1210->1224->1228->1231->1234->1238->1244->1252->1264->1275->1288
+1210->1224->1228->1231->1234->1238->1244->1252->1264->1267->1275->1288
+1210->1217->1222->1224->1228->1231->1234->1238->1244->1252->1275->1288
+Function:::: Parse::maybe_add_predicate_after_if(Parse::Block*)
+1565
+Function:::: Parse::repush_if_args()
+1366
+Function:::: Parse::do_one_bytecode()
+1820->2583->2777
+1820->2127
+1820->2131
+1820->2713
+Function:::: Parse::array_addressing(BasicType, int, Type const*&)
+115->206->210
+Function:::: Parse::seems_stable_comparison() const
+1352
+Function:::: Parse::branch_prediction(float&, BoolTest::mask, int, Node*)
+1295
+Function:::: Parse::sharpen_type_after_if(BoolTest::mask, Node*, Type const*, Node*, Type const*)
+1664->1694->1697->1699->1709->1758
+1664->1697->1709->1758
+1664->1697->1699->1709->1758
+Function:::: Parse::array_load(BasicType)
+55->73->75
+55->60->73->75
+Function:::: has_injected_profile(BoolTest::mask, Node*, int&, int&)
+1188
+Function:::: Parse::path_is_suitable_for_uncommon_trap(float) const
+1561
+File:::: make/hotspot/src/hotspot/share/opto/doCall.cpp
+Function:::: trace_type_profile(Compile*, ciMethod*, int, int, ciMethod*, ciKlass*, int, int)
+46
+Function:::: Compile::optimize_virtual_call(ciMethod*, ciInstanceKlass*, ciKlass*, ciMethod*, TypeOopPtr const*, bool, bool&, int&, bool)
+0
+Function:::: Compile::optimize_inlining(ciMethod*, ciInstanceKlass*, ciKlass*, ciMethod*, TypeOopPtr const*, bool)
+1118
+1118->1182
+Function:::: Parse::can_not_compile_call_site(ciMethod*, ciInstanceKlass*)
+460->461->462->463->472
+460->461->462->472
+Function:::: Parse::do_call()
+497->516->522->539->564->565->574->577->582->588->616->648->651->657
+497->516->522->539->564->565->577->582->588->616->648->651->654->657
+497->516->522->539->564->582->588->616->657->678->680->685->690->695->698->703->752->766->776
+Function:::: Compile::call_generator(ciMethod*, int, bool, JVMState*, bool, float, ciKlass*, bool)
+72
+Function:::: Compile::should_delay_string_inlining(ciMethod*, JVMState*)
+384
+Function:::: Compile::should_delay_vector_reboxing_inlining(ciMethod*, JVMState*)
+447
+Function:::: Compile::should_delay_boxing_inlining(ciMethod*, JVMState*)
+435
+File:::: make/hotspot/src/hotspot/share/opto/chaitin.cpp
+Function:::: PhaseChaitin::cache_lrg_info()
+0
+0->1154->1155->1159->1163
+Function:::: PhaseChaitin::Select()
+0
+0->1471->1474->1490->1501->1544->1545->1549->1554->1563->1569->1572->1579->1581->1587->1588->1595->1597
+Function:::: find_first_set(LRG&, RegMask, int)
+1341
+Function:::: PhaseChaitin::compact()
+0
+0->322
+0->315->325
+0->315->316->322
+0->328->332
+Function:::: PhaseChaitin::new_lrg(Node const*, unsigned int)
+274
+Function:::: LiveRangeMap::reset_uf_map(unsigned int)
+155->158
+Function:::: PhaseChaitin::bias_color(LRG&, int)
+0->1439
+Function:::: PhaseChaitin::de_ssa()
+690->704->705
+Function:::: PhaseChaitin::Union(Node const*, Node const*)
+0->269
+Function:::: PhaseChaitin::Register_Allocate()
+346->382->383->408->429
+346->439
+346->477
+346
+346->674->680->682
+346->457->461->466
+346->496->510->585
+346->496->510->585->602
+346->628->635
+346->383->408->429
+Function:::: is_legal_reg(LRG&, int, int)
+1317
+Function:::: PhaseChaitin::set_was_spilled(Node*)
+1645
+Function:::: LiveRangeMap::compress_uf_map_for_nodes()
+166->168
+Function:::: LiveRangeMap::find_compress(unsigned int)
+134->144->148
+Function:::: PhaseChaitin::clone_projs(Block*, unsigned int, Node*, Node*, unsigned int&)
+284
+Function:::: PhaseChaitin::fixup_spills()
+0->1658->1661
+0->1665->1666
+0->1667->1675
+0->1661
+Function:::: PhaseChaitin::Simplify()
+0->1179->1184->1191->1203->1213->1215->1216->1225->1229
+0->1184->1191->1203->1213->1215->1216->1225->1229
+0->1215->1243
+0->1184->1191->1203->1213->1215->1216->1225->1229->1231->1235
+Function:::: PhaseChaitin::gather_lrg_masks(bool)
+736->1089->1094->1099->1101
+Function:::: PhaseChaitin::choose_color(LRG&, int)
+1446->1449
+Function:::: PhaseChaitin::stretch_base_pointer_live_ranges(ResourceArea*)
+1862->1968
+Function:::: PhaseChaitin::PhaseChaitin(unsigned int, PhaseCFG&, Matcher&, bool)
+198->211->236
+198->236->240->242
+198->242
+198
+Function:::: PhaseChaitin::mark_ssa()
+711->727->728
+File:::: make/hotspot/src/hotspot/share/opto/narrowptrnode.cpp
+Function:::: DecodeNNode::Identity(PhaseGVN*)
+30->33->38
+30->38
+Function:::: DecodeNKlassNode::Value(PhaseGVN*) const
+82->87->88
+Function:::: DecodeNKlassNode::Identity(PhaseGVN*)
+71->74->79
+Function:::: DecodeNNode::Value(PhaseGVN*) const
+41->46->47
+41->43->46->47
+File:::: make/hotspot/src/hotspot/share/opto/graphKit.cpp
+Function:::: GraphKit::load_object_klass(Node*)
+1202->1206
+Function:::: GraphKit::type_check_receiver(Node*, ciKlass*, float, Node**)
+2999->3002->3003->3005->3006->3008->3009->3016->3017->3022
+Function:::: GraphKit::access_store_at(Node*, Node*, TypePtr const*, Node*, Type const*, BasicType, unsigned long)
+1613->1617->1623->1629->1631
+Function:::: GraphKit::add_exception_states_from(JVMState*)
+280->289
+Function:::: GraphKit::record_profiled_arguments_for_speculation(ciMethod*, Bytecodes::Code)
+2298->2301->2304->2305->2315
+2298->2301->2315
+Function:::: GraphKit::add_empty_predicate_impl(Deoptimization::DeoptReason, int)
+4100->4117->4119->4120->4123->4124->4127->4128->4129
+Function:::: GraphKit::make_constant_from_field(ciField*, Node*)
+4306->4310->4311->4316->4322
+4306->4310->4316->4319->4322
+Function:::: GraphKit::add_empty_predicates(int)
+4136->4137->4139->4140->4143
+Function:::: GraphKit::set_map_clone(SafePointNode*)
+767
+Function:::: GraphKit::load_array_length(Node*)
+1211->1215->1219
+Function:::: GraphKit::kill_dead_locals()
+792->813
+Function:::: GraphKit::access_load_at(Node*, Node*, TypePtr const*, Type const*, BasicType, unsigned long)
+1639->1648->1650
+Function:::: GraphKit::gen_subtype_check(Node*, Node*)
+2971->2990->2991
+Function:::: GraphKit::record_profiled_receiver_for_speculation(Node*)
+2260->2263->2265->2266->2267->2287->2288
+Function:::: GraphKit::set_all_memory_call(Node*, bool)
+0->1537
+Function:::: GraphKit::record_profile_for_speculation(Node*, ciKlass*, ProfilePtrKind)
+2202->2218->2234->2248
+Function:::: GraphKit::store_to_memory(Node*, Node*, Node*, BasicType, int, MemNode::MemOrd, bool, bool, bool, bool)
+1582->1590->1593->1597->1600
+Function:::: GraphKit::add_safepoint_edges(SafePointNode*, bool)
+890->1006->1013->1020->1040
+890->1013->1020->1040
+Function:::: GraphKit::make_load(Node*, Node*, Type const*, BasicType, int, MemNode::MemOrd, LoadNode::ControlDependency, bool, bool, bool, bool, unsigned char)
+1562->1567->1569
+Function:::: BuildCutout::BuildCutout(GraphKit*, Node*, float, float)
+689->695->696->697
+Function:::: GraphKit::stop_and_kill_map()
+0
+0->170->173
+0->168->170->173
+Function:::: PreserveJVMState::~PreserveJVMState()
+675
+Function:::: GraphKit::uncommon_trap(int, ciKlass*, char const*, bool, bool)
+2050->2157->2161->2163->2166->2167
+Function:::: GraphKit::transfer_exceptions_into_jvms()
+293->316
+Function:::: GraphKit::array_element_address(Node*, Node*, BasicType, TypeInt const*, Node*)
+1749
+Function:::: BuildCutout::~BuildCutout()
+701
+Function:::: GraphKit::GraphKit()
+74
+Function:::: GraphKit::make_runtime_call(int, TypeFunc const*, unsigned char*, char const*, TypePtr const*, Node*, Node*, Node*, Node*, Node*, Node*, Node*, Node*)
+2514->2523->2527
+2514
+2514->2574->2582
+2514->2520
+2514->2547->2548
+2514->2564->2567->2571->2574->2582
+2514->2586
+Function:::: GraphKit::GraphKit(JVMState*)
+62->65
+62
+Function:::: GraphKit::basic_plus_adr(Node*, Node*, Node*)
+1167
+Function:::: should_reexecute_implied_by_bytecode(JVMState*, bool)
+861
+Function:::: GraphKit::memory(unsigned int)
+1513->1516
+1513
+Function:::: GraphKit::replace_in_map(Node*, Node*)
+1486->1506
+1490
+Function:::: GraphKit::java_bc() const
+491->494
+494
+Function:::: GraphKit::clean_stack(int)
+87->94->97
+87->97
+Function:::: GraphKit::subtype_check_receiver(Node*, ciKlass*, Node**)
+3028->3034->3035
+Function:::: GraphKit::sync_jvms() const
+103->104
+103
+Function:::: GraphKit::gen_checkcast(Node*, Node*, Node**)
+3336
+Function:::: PreserveJVMState::PreserveJVMState(GraphKit*, bool)
+663
+663->666
+Function:::: GraphKit::builtin_throw(Deoptimization::DeoptReason, Node*)
+538->657
+Function:::: GraphKit::set_predefined_output_for_runtime_call(Node*, Node*, TypePtr const*)
+0->1888->1904
+0->1904
+Function:::: GraphKit::set_all_memory(Node*)
+1530->1532->1533
+Function:::: GraphKit::compute_stack_effects(int&, int&)
+1043->1055->1058->1140->1160
+1043->1058->1103->1160
+1043
+Function:::: GraphKit::reset_memory()
+1525
+Function:::: GraphKit::cast_not_null(Node*, bool)
+1439->1444->1445->1446->1454
+Function:::: GraphKit::clone_map()
+724->728->733->734->736->737->739
+Function:::: GraphKit::round_double_arguments(ciMethod*)
+2371
+Function:::: GraphKit::record_profiled_parameters_for_speculation()
+2322->2325->2335
+2322->2327->2332->2335
+Function:::: GraphKit::null_check_common(Node*, BasicType, bool, Node**, bool)
+1256->1428->1433
+1256->1433
+Function:::: GraphKit::set_predefined_input_for_runtime_call(SafePointNode*, Node*)
+1858->1860->1861->1862->1863->1864
+Function:::: GraphKit::stopped()
+179->180->182
+179
+179->182
+Function:::: AllocateNode::Ideal_allocation(Node*, PhaseTransform*)
+4036->4040->4051->4059
+4036
+4036->4051->4059
+4036->4044->4051->4059
+File:::: make/hotspot/src/hotspot/share/opto/multnode.cpp
+Function:::: ProjNode::pinned() const
+136
+Function:::: ProjNode::ideal_reg() const
+181
+Function:::: MultiNode::match(ProjNode const*, Matcher const*)
+43
+Function:::: ProjNode::size_of() const
+90
+Function:::: ProjNode::Value(PhaseGVN*) const
+169->170->171
+Function:::: ProjNode::bottom_type() const
+116->117->118
+Function:::: ProjNode::hash() const
+87
+Function:::: MultiNode::out_RegMask() const
+40
+Function:::: ProjNode::proj_type(Type const*) const
+105
+Function:::: ProjNode::cmp(Node const&) const
+89
+File:::: src/hotspot/share/opto/loopnode.hpp
+Function:::: LoopNode::size_of() const
+59
+Function:::: LoopNode::LoopNode(Node*, Node*)
+142
+File:::: make/hotspot/src/hotspot/share/opto/cfgnode.cpp
+Function:::: RegionNode::Identity(PhaseGVN*)
+72
+Function:::: PhiNode::is_unsafe_data_reference(Node*) const
+1877
+Function:::: PhiNode::slice_memory(TypePtr const*) const
+1011->1014->1018
+Function:::: PhiNode::unique_input(PhaseTransform*, bool)
+1472
+1472->1474->1476->1494
+1472->1474->1476
+Function:::: PhiNode::is_data_loop(RegionNode*, Node*, PhaseGVN const*)
+2504->2511
+Function:::: PhiNode::make(Node*, Node*, Type const*, TypePtr const*)
+0->987->989->990->992
+0->990->992
+Function:::: CProjNode::out_RegMask() const
+2602
+Function:::: PhiNode::Ideal(PhaseGVN*, bool)
+1953->1978->1991->1998->1999->2006->2011->2015->2029->2497
+1953->1978->1991->1998->1999->2006->2011->2098->2142->2149->2246->2396->2456->2497
+Function:::: RegionNode::Value(PhaseGVN*) const
+0
+Function:::: PhiNode::Value(PhaseGVN*) const
+1139->1210->1211->1217->1227->1244->1328
+Function:::: Node::nonnull_req() const
+0->959
+Function:::: PhiNode::simple_data_loop_check(Node*) const
+1839->1869
+Function:::: PhiNode::is_diamond_phi(bool) const
+1338->1343->1346->1347->1348
+1338
+Function:::: PhiNode::Identity(PhaseGVN*)
+1413->1418->1429->1452
+1413
+Function:::: RegionNode::Ideal(PhaseGVN*, bool)
+0
+0->805
+Function:::: PhiNode::hash() const
+969
+Function:::: RegionNode::out_RegMask() const
+952
+File:::: src/hotspot/share/opto/narrowptrnode.hpp
+Function:::: DecodeNKlassNode::DecodeNKlassNode(Node*, Type const*)
+109
+Function:::: DecodeNarrowPtrNode::DecodeNarrowPtrNode(Node*, Type const*)
+78->81
+Function:::: DecodeNNode::DecodeNNode(Node*, Type const*)
+94
+File:::: make/hotspot/src/hotspot/share/opto/callGenerator.cpp
+Function:::: CallGenerator::for_osr(ciMethod*, int)
+301->302->305
+Function:::: PredictedCallGenerator::generate(JVMState*)
+0
+Function:::: ParseGenerator::generate(JVMState*)
+87
+87->95->99
+87->99
+Function:::: CallGenerator::for_inline(ciMethod*, float)
+293->294->295
+Function:::: UncommonTrapCallGenerator::UncommonTrapCallGenerator(ciMethod*, Deoptimization::DeoptReason, Deoptimization::DeoptAction)
+1481
+Function:::: PredictedCallGenerator::PredictedCallGenerator(ciKlass*, CallGenerator*, CallGenerator*, bool, float)
+897
+Function:::: CallGenerator::for_predicted_call(ciKlass*, CallGenerator*, CallGenerator*, float)
+923
+Function:::: UncommonTrapCallGenerator::generate(JVMState*)
+0->1519
+Function:::: CallGenerator::for_guarded_call(ciKlass*, CallGenerator*, CallGenerator*)
+930
+Function:::: ParseGenerator::ParseGenerator(ciMethod*, float, bool)
+73
+Function:::: CallGenerator::for_uncommon_trap(ciMethod*, Deoptimization::DeoptReason, Deoptimization::DeoptAction)
+1498
+File:::: make/hotspot/src/hotspot/share/opto/compile.cpp
+Function:::: Compile::can_alias(TypePtr const*, int)
+0->1750->1757
+Function:::: Compile::init_start(StartNode*)
+1066
+Function:::: Compile::TracePhase::~TracePhase()
+4065
+Function:::: Compile::print_method(CompilerPhaseType, char const*, int)
+4784
+Function:::: Compile::copy_node_notes_to(Node*, Node*)
+0->1234->1250
+Function:::: Compile::find_alias_type(TypePtr const*, bool, ciField*)
+1578
+Function:::: Compile::Compile(ciEnv*, ciMethod*, int, bool, bool, bool, bool, bool, DirectiveSet*)
+545->614->668->687->690->691->714->715->719
+545->614->668->696->697->698->709->714->715->719
+Function:::: Compile::set_cached_top_node(Node*)
+1112
+Function:::: Compile::too_many_recompiles(ciMethod*, int, Deoptimization::DeoptReason)
+3892->3899->3905->3918->3932
+3892->3905->3918->3932
+3892->3902->3903->3904->3907->3918->3932
+Function:::: CompileWrapper::~CompileWrapper()
+484
+Function:::: Compile::flatten_alias_type(TypePtr const*) const
+1271->1279->1289->1293->1299->1303->1304->1307->1309->1324->1329->1333->1339->1347->1348->1354->1405->1443->1490
+1271->1289->1354->1405->1443->1490
+1271->1279->1289->1354->1405->1443->1490
+1271->1405->1443->1490
+Function:::: Compile::too_many_traps(Deoptimization::DeoptReason, ciMethodData*)
+3868
+Function:::: Compile::print_inlining_init()
+4196
+Function:::: Compile::allow_range_check_smearing() const
+1265
+Function:::: Compile::static_subtype_check(ciKlass*, ciKlass*)
+4099->4105->4106->4108->4112->4113
+4099->4105->4108->4112->4113->4142
+Function:::: Compile::find_intrinsic(ciMethod*, bool)
+145->165
+145->153->165
+Function:::: Compile::constrained_convI2L(PhaseGVN*, Node*, TypeInt const*, Node*, bool)
+0->4168->4173
+0->4177
+Function:::: Compile::print_inlining_assert_ready()
+4280
+Function:::: CompileWrapper::CompileWrapper(Compile*)
+471->480
+Function:::: Compile::needs_clinit_barrier(ciInstanceKlass*, ciMethod*)
+0->3957->3984
+Function:::: Compile::needs_clinit_barrier(ciField*, ciMethod*)
+3953
+Function:::: Compile::conv_I2X_index(PhaseGVN*, Node*, TypeInt const*, Node*)
+4157
+Function:::: Compile::AliasType::Init(int, TypePtr const*)
+1500
+Function:::: Compile::Code_Gen()
+2691->2771->2778->2791->2792->2800
+Function:::: Compile::immutable_memory()
+1088
+Function:::: Compile::probe_alias_cache(TypePtr const*)
+1558
+Function:::: Compile::print_method(CompilerPhaseType, int, int)
+4805
+Function:::: Compile::print_inlining_update(CallGenerator*)
+4235
+Function:::: Compile::TracePhase::TracePhase(char const*, elapsedTimer*)
+4046
+Function:::: Compile::start() const
+1075
+Function:::: Compile::Compile(ciEnv*, TypeFunc const* (*)(), unsigned char*, char const*, int, bool, bool, DirectiveSet*)
+838->906->916->929
+Function:::: Compile::Init(int)
+934->959->961->962->965->966->967->992->995->996->1000->1003->1023->1026->1038->1043->1044->1045->1051->1052
+Function:::: Compile::set_clone_map(Dict*)
+4708
+Function:::: Compile::too_many_traps(ciMethod*, int, Deoptimization::DeoptReason)
+3843->3850->3861->3863
+Function:::: Compile::narrow_value(BasicType, Node*, Type const*, PhaseGVN*, bool)
+4913->4918->4919->4929->4930->4933
+Function:::: Compile::alias_type(ciField*)
+1702->1706
+1702->1705->1706
+Function:::: Compile::record_for_post_loop_opts_igvn(Node*)
+1773->1776->1778
+File:::: make/hotspot/src/hotspot/share/opto/subnode.cpp
+Function:::: SubINode::Ideal(PhaseGVN*, bool)
+164->285
+Function:::: SubNode::Identity(PhaseGVN*)
+56->64->82->83
+Function:::: SubINode::sub(Type const*, Type const*) const
+292->303->304
+Function:::: CmpUNode::sub(Type const*, Type const*) const
+621
+621->638->640->668
+621->651->653
+Function:::: BoolNode::Value(PhaseGVN*) const
+1735
+Function:::: CmpPNode::sub(Type const*, Type const*) const
+873->971
+Function:::: BoolNode::is_counted_loop_exit_test()
+1765
+Function:::: BoolTest::cc2logical(Type const*) const
+1252->1254->1256
+1252->1256
+1252->1261->1262->1265
+1252->1254->1261->1265
+1252->1254->1261->1262->1265
+1252->1261->1265
+Function:::: CmpINode::Ideal(PhaseGVN*, bool)
+760
+760->761->775
+Function:::: isa_const_java_mirror(PhaseGVN*, Node*)
+1005
+Function:::: BoolNode::hash() const
+1299
+Function:::: BoolNode::fold_cmpI(PhaseGVN*, SubNode*, Node*, int, int, TypeInt const*)
+0
+Function:::: isa_java_mirror_load(PhaseGVN*, Node*)
+982
+Function:::: CmpNode::Identity(PhaseGVN*)
+534
+Function:::: CmpINode::sub(Type const*, Type const*) const
+595->597
+595->597->600->603->605
+595
+595->597->600->603
+595->600->603
+595->600->603->605
+Function:::: SubNode::Value(PhaseGVN*) const
+108->116
+Function:::: BoolNode::Ideal(PhaseGVN*, bool)
+1407
+1407->1729
+Function:::: CmpUNode::Value(PhaseGVN*) const
+674->680->750
+Function:::: SubNode::Value_common(PhaseTransform*) const
+88->91->93->98->101
+Function:::: BoolNode::negate(PhaseGVN*)
+1342
+Function:::: CmpPNode::Ideal(PhaseGVN*, bool)
+0->1047->1049->1059->1060->1063->1068->1074->1079->1082->1083->1092->1096->1130
+0->1047->1049->1059->1130
+0->1046->1047->1049->1059->1130
+File:::: src/hotspot/share/opto/multnode.hpp
+Function:::: MultiNode::hash() const
+44
+Function:::: ProjNode::ProjNode(Node*, unsigned int, bool)
+68
+68->73
+Function:::: MultiNode::MultiNode(unsigned int)
+38
+File:::: src/hotspot/share/opto/live.hpp
+Function:::: PhaseLive::live(Block const*)
+0
+File:::: src/hotspot/share/opto/regalloc.hpp
+Function:::: PhaseRegAlloc::get_encode(Node const*) const
+118
+Function:::: PhaseRegAlloc::get_reg_first(Node const*) const
+0->66
+Function:::: PhaseRegAlloc::set2(unsigned int, int)
+0
+Function:::: PhaseRegAlloc::set_bad(unsigned int)
+86
+Function:::: PhaseRegAlloc::set_pair(unsigned int, int, int)
+0
+File:::: src/hotspot/share/opto/cfgnode.hpp
+Function:::: GotoNode::GotoNode(Node*)
+244
+Function:::: RegionNode::hash() const
+102
+Function:::: RegionNode::pinned() const
+100
+Function:::: IfNode::IfNode(Node*, Node*, float, float)
+388->390->391
+Function:::: RegionNode::RegionNode(unsigned int)
+79->81
+Function:::: IfFalseNode::IfFalseNode(IfNode*)
+457
+Function:::: CProjNode::is_block_proj() const
+269
+Function:::: IfProjNode::IfProjNode(IfNode*, unsigned int)
+431
+Function:::: CProjNode::CProjNode(Node*, unsigned int)
+265
+Function:::: IfTrueNode::always_taken(TypeTuple const*) const
+452
+Function:::: RangeCheckNode::RangeCheckNode(Node*, Node*, float, float)
+421
+Function:::: IfTrueNode::IfTrueNode(IfNode*)
+446
+Function:::: PhiNode::PhiNode(Node*, Type const*, TypePtr const*, int, int, int, int)
+170
+Function:::: PhiNode::region() const
+184
+Function:::: RegionNode::bottom_type() const
+104
+Function:::: RegionNode::is_copy() const
+85->87
+85
+Function:::: IfFalseNode::always_taken(TypeTuple const*) const
+463
+Function:::: CProjNode::hash() const
+268
+Function:::: PhiNode::size_of() const
+144
+Function:::: MultiBranchNode::MultiBranchNode(unsigned int)
+280
+File:::: src/hotspot/share/opto/type.hpp
+Function:::: TypeVect::make(BasicType, unsigned int)
+801
+Function:::: TypeD::TypeD(double)
+517
+Function:::: TypeVectX::TypeVectX(Type const*, unsigned int)
+846
+Function:::: TypeVect::element_type() const
+787
+Function:::: Type::is_known_instance() const
+475
+Function:::: TypeVect::TypeVect(Type::TYPES, Type const*, unsigned int)
+783
+Function:::: Type::make_narrowklass() const
+1827->1828
+Function:::: TypeInt::is_con(int) const
+584
+Function:::: TypeOopPtr::is_ptr_to_narrowklass_nv() const
+1092
+Function:::: Type::is_ptr_to_narrowklass() const
+1618
+Function:::: TypeF::TypeF(float)
+486
+Function:::: Type::operator new(unsigned long)
+192
+190->192
+Function:::: TypeRawPtr::TypeRawPtr(TypePtr::PTR, unsigned char*)
+990
+Function:::: TypeTuple::field_at(unsigned int) const
+0->707
+Function:::: TypeNarrowOop::isa_same_narrowptr(Type const*) const
+0
+Function:::: TypeOopPtr::make_from_klass_raw(ciKlass*)
+1071
+Function:::: TypePtr::meet_ptr(TypePtr::PTR) const
+949
+Function:::: TypeNarrowOop::TypeNarrowOop(TypePtr const*)
+1491
+Function:::: Type::get_const_basic_type(BasicType)
+389
+Function:::: TypeInt::is_con() const
+583
+Function:::: TypeInstPtr::is_loaded() const
+1144
+Function:::: TypePtr::offset() const
+923
+Function:::: Type::isa_narrowoop() const
+1780
+Function:::: Type::higher_equal(Type const*) const
+217
+Function:::: TypePtr::maybe_null() const
+971
+Function:::: Type::base() const
+207
+Function:::: Type::remove_speculative() const
+468
+Function:::: Type::isa_long() const
+0->1658
+0
+Function:::: TypeInt::get_con() const
+585
+Function:::: TypeNarrowPtr::TypeNarrowPtr(Type::TYPES, TypePtr const*)
+1444
+Function:::: TypeAryPtr::elem() const
+1252
+Function:::: TypeVectD::TypeVectD(Type const*, unsigned int)
+841
+Function:::: TypePtr::TypePtr(Type::TYPES, TypePtr::PTR, int, TypePtr const*, int)
+880
+Function:::: Type::Type(Type::TYPES)
+179
+Function:::: TypeKlassPtr::klass_is_exact() const
+1388
+Function:::: Type::operator delete(void*)
+195->196
+195
+Function:::: TypePtr::speculative() const
+959
+Function:::: TypePtr::ptr() const
+924
+Function:::: TypePtr::above_centerline(TypePtr::PTR)
+974
+Function:::: TypeOopPtr::is_known_instance() const
+1094
+Function:::: TypeInteger::TypeInteger(Type::TYPES)
+547
+Function:::: Type::cleanup_speculative() const
+469
+Function:::: Type::isa_oopptr() const
+1742
+Function:::: TypeTuple::cnt() const
+704
+Function:::: TypeKlassPtr::klass() const
+1387
+Function:::: Type::is_zero_type() const
+411
+415
+411->415
+Function:::: TypeFunc::TypeFunc(TypeTuple const*, TypeTuple const*)
+1568
+Function:::: Type::isa_instptr() const
+1755
+0
+Function:::: TypeVectZ::TypeVectZ(Type const*, unsigned int)
+856
+Function:::: TypeOopPtr::klass_is_exact() const
+1087
+Function:::: TypeTuple::TypeTuple(unsigned int, Type const**)
+692
+Function:::: TypePtr::below_centerline(TypePtr::PTR)
+975
+Function:::: TypeOopPtr::make_from_klass(ciKlass*)
+1061
+Function:::: Type::isa_aryptr() const
+0->1764
+1764
+Function:::: TypeMetadataPtr::metadata() const
+1345
+Function:::: TypePtr::dual_ptr() const
+950
+Function:::: Type::ideal_reg() const
+432
+Function:::: Type::type_dict()
+159
+Function:::: TypeOopPtr::klass() const
+1086
+Function:::: TypeAry::TypeAry(Type const*, TypeInt const*, bool)
+745
+Function:::: Type::get_zero_type(BasicType)
+406
+Function:::: Type::isa_klassptr() const
+1803
+Function:::: TypeOopPtr::is_ptr_to_narrowoop_nv() const
+1091
+Function:::: TypeNarrowPtr::get_ptrtype() const
+1471
+Function:::: TypeNarrowKlass::isa_same_narrowptr(Type const*) const
+0
+Function:::: TypeVectY::TypeVectY(Type const*, unsigned int)
+851
+Function:::: TypePtr::join_ptr(TypePtr::PTR) const
+955
+Function:::: TypeLong::is_con() const
+0
+651
+Function:::: Type::basic_type() const
+431
+Function:::: Type::make_ptr() const
+1812
+1814
+1813
+Function:::: TypeOopPtr::is_ptr_to_boxed_value() const
+1093
+Function:::: Type::isa_ptr() const
+1731
+Function:::: Type::make_narrowoop() const
+0
+0->1823
+Function:::: TypeNarrowKlass::TypeNarrowKlass(TypePtr const*)
+1535
+Function:::: TypeVectS::TypeVectS(Type const*, unsigned int)
+836
+Function:::: TypePtr::inline_depth() const
+960
+Function:::: TypeNarrowOop::make_same_narrowptr(TypePtr const*) const
+1503
+Function:::: Type::join_helper(Type const*, bool) const
+184
+Function:::: Type::isa_int() const
+1649
+0
+0->1649
+Function:::: TypeNarrowKlass::make_same_narrowptr(TypePtr const*) const
+1547
+Function:::: TypeKlassPtr::make(ciKlass*)
+1413
+Function:::: Type::meet_speculative(Type const*) const
+231
+Function:::: Type::join_speculative(Type const*) const
+254
+Function:::: TypeAryPtr::is_autobox_cache() const
+1256
+Function:::: TypeFunc::domain() const
+0
+1589
+Function:::: TypeOopPtr::const_oop() const
+1085
+Function:::: TypeAryPtr::size() const
+1253
+Function:::: TypeAryPtr::is_stable() const
+1254
+Function:::: Type::dual() const
+240
+Function:::: TypeOopPtr::is_known_instance_field() const
+1096
+Function:::: TypeAryPtr::TypeAryPtr(TypePtr::PTR, ciObject*, TypeAry const*, ciKlass*, bool, int, int, bool, TypePtr const*, int)
+1220
+Function:::: Type::meet(Type const*) const
+227
+Function:::: Type::is_ptr_to_narrowoop() const
+1610
+File:::: src/hotspot/share/opto/memnode.hpp
+Function:::: MemNode::barrier_data()
+143
+Function:::: StoreNode::StoreNode(Node*, Node*, Node*, TypePtr const*, Node*, MemNode::MemOrd)
+575
+Function:::: LoadNKlassNode::memory_type() const
+542
+Function:::: LoadDNode::LoadDNode(Node*, Node*, Node*, TypePtr const*, Type const*, MemNode::MemOrd, LoadNode::ControlDependency, bool)
+464
+Function:::: LoadUSNode::LoadUSNode(Node*, Node*, Node*, TypePtr const*, TypeInt const*, MemNode::MemOrd, LoadNode::ControlDependency)
+353
+Function:::: LoadLNode::LoadLNode(Node*, Node*, Node*, TypePtr const*, TypeLong const*, MemNode::MemOrd, LoadNode::ControlDependency, bool)
+414
+Function:::: LoadINode::LoadINode(Node*, Node*, Node*, TypePtr const*, TypeInt const*, MemNode::MemOrd, LoadNode::ControlDependency)
+381
+Function:::: LoadFNode::LoadFNode(Node*, Node*, Node*, TypePtr const*, Type const*, MemNode::MemOrd, LoadNode::ControlDependency)
+443
+Function:::: LoadPNode::ideal_reg() const
+495
+Function:::: StorePNode::StorePNode(Node*, Node*, Node*, TypePtr const*, Node*, MemNode::MemOrd)
+745
+Function:::: StorePNode::memory_type() const
+747
+Function:::: MergeMemStream::next_non_empty()
+1645
+Function:::: LoadNKlassNode::LoadNKlassNode(Node*, Node*, Node*, TypePtr const*, TypeNarrowKlass const*, MemNode::MemOrd)
+538
+Function:::: MergeMemNode::bottom_type() const
+1464
+Function:::: LoadNode::LoadNode(Node*, Node*, Node*, TypePtr const*, Type const*, MemNode::MemOrd, LoadNode::ControlDependency)
+215
+Function:::: MemNode::set_barrier_data(unsigned char)
+144
+Function:::: StoreBNode::StoreBNode(Node*, Node*, Node*, TypePtr const*, Node*, MemNode::MemOrd)
+650
+Function:::: MemNode::find_previous_arraycopy(PhaseTransform*, Node*, Node*&, bool) const
+95
+Function:::: LoadINode::ideal_reg() const
+383
+Function:::: MergeMemStream::next_non_empty2()
+1646
+Function:::: MergeMemStream::next_non_empty(bool)
+1667->1668
+1667
+Function:::: MergeMemStream::at_base_memory() const
+1585
+Function:::: LoadINode::memory_type() const
+385
+Function:::: LoadNode::has_pinned_control_dependency() const
+291
+Function:::: MergeMemNode::base_memory() const
+1473
+Function:::: MergeMemNode::empty_memory() const
+1477
+Function:::: MemNode::memory_size() const
+139
+Function:::: MergeMemStream::MergeMemStream(MergeMemNode*, MergeMemNode const*)
+1562
+Function:::: LoadNNode::memory_type() const
+510
+Function:::: LoadNNode::LoadNNode(Node*, Node*, Node*, TypePtr const*, Type const*, MemNode::MemOrd, LoadNode::ControlDependency)
+506
+Function:::: MergeMemStream::next(bool)
+1657
+Function:::: LoadPNode::memory_type() const
+497
+Function:::: LoadBNode::LoadBNode(Node*, Node*, Node*, TypePtr const*, TypeInt const*, MemNode::MemOrd, LoadNode::ControlDependency)
+325
+Function:::: Parse::merge_memory_edges(MergeMemNode*, int, bool)
+0
+Function:::: LoadPNode::LoadPNode(Node*, Node*, Node*, TypePtr const*, TypePtr const*, MemNode::MemOrd, LoadNode::ControlDependency)
+493
+Function:::: LoadNode::set_type(Type const*)
+267
+Function:::: MemNode::is_mismatched_access() const
+0
+Function:::: MemNode::MemNode(Node*, Node*, Node*, TypePtr const*)
+68
+Function:::: Parse::return_current(Node*)
+0
+Function:::: MergeMemStream::is_empty() const
+1602
+Function:::: MergeMemStream::set_memory(Node*)
+1627
+Function:::: MemNode::MemNode(Node*, Node*, Node*, TypePtr const*, Node*)
+77
+File:::: src/hotspot/share/opto/connode.hpp
+Function:::: ConNode::out_RegMask() const
+46
+Function:::: ConNode::ConNode(Type const*)
+40
+Function:::: ThreadLocalNode::bottom_type() const
+152
+Function:::: ThreadLocalNode::ThreadLocalNode()
+150
+Function:::: ConLNode::ConLNode(TypeLong const*)
+108
+Function:::: ConPNode::ConPNode(TypePtr const*)
+73
+Function:::: ThreadLocalNode::ideal_reg() const
+153
+Function:::: ConINode::ConINode(TypeInt const*)
+57
+File:::: make/hotspot/src/hotspot/share/opto/live.cpp
+Function:::: PhaseLive::PhaseLive(PhaseCFG const&, GrowableArray<unsigned int> const&, Arena*, bool)
+46
+Function:::: PhaseLive::compute(unsigned int)
+56->185
+Function:::: PhaseLive::getset(Block*)
+195->198
+Function:::: PhaseLive::getfreeset()
+206
+Function:::: PhaseLive::add_livein(Block*, IndexSet*)
+278
+Function:::: PhaseLive::add_liveout(Block*, IndexSet*, VectorSet&)
+248
+Function:::: PhaseLive::add_liveout(Block*, unsigned int, VectorSet&)
+233
+Function:::: PhaseLive::freeset(Block*)
+220
+File:::: make/hotspot/src/hotspot/share/opto/node.cpp
+Function:::: Node::match_edge(unsigned int) const
+2299
+Function:::: Node::get_ptr() const
+1542
+Function:::: Node::is_block_proj() const
+1108
+Function:::: Node_Array::remove(unsigned int)
+2330
+Function:::: Node::emit(CodeBuffer&, PhaseRegAlloc*) const
+1100
+Function:::: Node_Array::insert(unsigned int, Node*)
+2322
+Function:::: Node::find_edge(Node*)
+0->879->880->883
+Function:::: Node::ins_req(unsigned int, Node*)
+867->873->874->875
+Function:::: Node::cmp(Node const&) const
+1495
+Function:::: TypeNode::size_of() const
+2533
+Function:::: Node::is_dead_loop_safe() const
+2419->2439
+2419
+Function:::: Node::replace_edge(Node*, Node*, PhaseGVN*)
+0->889
+0->889->890->891->895->902
+0
+Function:::: Node::Value(PhaseGVN*) const
+1141
+Function:::: Node_Array::grow(unsigned int)
+2315->2316
+2315
+Function:::: Node::size_of() const
+1066
+Function:::: TypeNode::cmp(Node const&) const
+2551
+Function:::: Node::size(PhaseRegAlloc*) const
+1103
+Function:::: Node::Node(unsigned int)
+336->348
+Function:::: Node::add_req(Node*)
+778->782->789->790->791
+778->789->790->791
+Function:::: Node::jvms() const
+1072
+Function:::: Node::Node(Node*, Node*, Node*)
+387->394->395->396
+Function:::: Node::destruct(PhaseValues*)
+603->674->678->681
+Function:::: Node::add_prec(Node*)
+1037
+Function:::: Node::Node(Node*, Node*)
+371->377->378
+Function:::: Node::is_iteratively_computed()
+2350
+Function:::: Node::grow(unsigned int)
+686->698->708
+686->708
+Function:::: TypeNode::ideal_reg() const
+2558
+Function:::: Node::uncast(bool) const
+965
+Function:::: Node::Ideal(PhaseGVN*, bool)
+1198
+Function:::: Node::find_int_type() const
+1519
+1519->1526
+Function:::: TypeNode::bottom_type() const
+2553
+Function:::: Node::needs_anti_dependence_check() const
+1510
+Function:::: Node::Init(int)
+311
+Function:::: TypeNode::Value(PhaseGVN*) const
+2554
+Function:::: Node::find_long_type() const
+1554
+Function:::: Node::setup_is_top()
+589->598
+589->591->598
+Function:::: Node::disconnect_inputs(Compile*)
+934->955->956
+Function:::: Node::raise_bottom_type(Type const*)
+1117
+1117->1130
+Function:::: Node::Node(Node*)
+357->362
+Function:::: Node::del_req(unsigned int)
+838->839->840->842
+838->842
+Function:::: Node::rematerialize() const
+1501->1505
+Function:::: Node::ideal_reg() const
+1069
+Function:::: Node::hash() const
+0->1488->1489
+Function:::: TypeNode::hash() const
+0->2548
+Function:::: Node::remove_dead_region(PhaseGVN*, bool)
+1466->1475->1481
+Function:::: Node::Identity(PhaseGVN*)
+1135
+Function:::: Node::clone() const
+500->518->520->523->526->531->535->564->576->582
+500->518->520->523->526->531->535->564->576->579->580->582
+Function:::: Node::uncast_helper(Node const*, bool)
+1016->1019
+1016->1022
+Function:::: Node::Node(Node*, Node*, Node*, Node*)
+405->413->414->415->416
+Function:::: Node::out_grow(unsigned int)
+714->732
+714
+714->718->732
+Function:::: Node::add_req_batch(Node*, unsigned int)
+798->806->809->819->820->824->829
+798->805->806->809->819->820->824->829
+File:::: src/hotspot/share/opto/castnode.hpp
+Function:::: CastPPNode::ideal_reg() const
+175
+Function:::: CheckCastPPNode::CheckCastPPNode(Node*, Node*, Type const*, ConstraintCastNode::DependencyType)
+183->185->186
+Function:::: CastIINode::has_range_check()
+101
+Function:::: ConstraintCastNode::ConstraintCastNode(Node*, Type const*, ConstraintCastNode::DependencyType)
+49->51
+Function:::: CastIINode::CastIINode(Node*, Type const*, ConstraintCastNode::DependencyType, bool)
+86
+Function:::: CastPPNode::CastPPNode(Node*, Type const*, ConstraintCastNode::DependencyType)
+172
+File:::: src/hotspot/share/opto/c2compiler.hpp
+Function:::: C2Compiler::name()
+39
+File:::: src/hotspot/share/opto/compile.hpp
+Function:::: Compile::out_preserve_stack_slots()
+1076
+Function:::: Compile::check_node_count(unsigned int, char const*)
+756
+Function:::: Compile::~Compile()
+168
+Function:::: Compile::AliasType::set_field(ciField*)
+224
+Function:::: Compile::debug_info()
+1015
+Function:::: Compile::ilt() const
+525
+Function:::: Compile::clinit_barrier_on_entry()
+596
+Function:::: Compile::live_nodes() const
+791
+Function:::: Compile::type_arena()
+841
+Function:::: Compile::is_method_compilation() const
+522
+Function:::: Compile::has_stringbuilder() const
+0
+Function:::: Compile::cfg()
+1006
+Function:::: Compile::record_dead_node(unsigned int)
+784
+784->785
+Function:::: Compile::set_type_arena(Arena*)
+847
+Function:::: Compile::age_code() const
+581
+Function:::: Compile::directive() const
+502
+Function:::: Compile::set_recent_alloc(Node*, Node*)
+782
+Function:::: CloneMap::set_debug(bool)
+158
+Function:::: Compile::set_age_code(bool)
+582
+Function:::: Compile::set_type_dict(Dict*)
+848
+Function:::: Compile::unique() const
+765
+Function:::: Compile::current()
+492
+Function:::: Compile::print_intrinsics() const
+588
+Function:::: Compile::last_tf(ciMethod*)
+852
+Function:::: Compile::add_predicate_opaq(Node*)
+699
+Function:::: Compile::comp_arena()
+739
+Function:::: Compile::node_note_array() const
+819
+Function:::: Compile::eliminate_boxing() const
+511
+Function:::: Compile::alias_type(int)
+860
+Function:::: Compile::root() const
+772
+Function:::: Compile::print_assembly() const
+584
+Function:::: Compile::default_node_notes() const
+821
+Function:::: Compile::tf() const
+523
+Function:::: Compile::AliasType::Init(int, TypePtr const*)
+0
+Function:::: Compile::set_has_loops(bool)
+549
+Function:::: Compile::failing() const
+742
+Function:::: Compile::do_escape_analysis() const
+509
+Function:::: Compile::set_default_node_notes(Node_Notes*)
+0
+Function:::: Compile::trap_count(unsigned int) const
+565
+Function:::: Compile::env() const
+740
+Function:::: Compile::set_root(RootNode*)
+773
+Function:::: Compile::print_inlining() const
+586
+Function:::: Compile::is_osr_compilation() const
+521
+Function:::: Compile::too_many_traps_or_recompiles(ciMethod*, int, Deoptimization::DeoptReason)
+912->913
+Function:::: Compile::AliasType::index() const
+210
+Function:::: Compile::AliasType::field() const
+212
+Function:::: Compile::AliasType::is_rewritable() const
+214
+Function:::: Compile::initial_gvn()
+0->922
+Function:::: Compile::add_macro_node(Node*)
+677
+Function:::: Compile::has_method()
+1051
+Function:::: Compile::set_unique(unsigned int)
+767
+Function:::: Compile::node_arena()
+770
+Function:::: Compile::method() const
+519
+Function:::: Compile::over_inlining_cutoff() const
+978
+File:::: src/hotspot/share/opto/matcher.hpp
+Function:::: Matcher::vector_size_supported(BasicType, int)
+342
+Function:::: Matcher::set_new_node(Node const*, Node*)
+162
+Function:::: Matcher::MStack::set_state(Matcher::Node_State)
+82
+Function:::: Matcher::~Matcher()
+43
+Function:::: Matcher::set_dontcare(Node*)
+201
+Function:::: Matcher::xform(Node*, int)
+0
+Function:::: Matcher::MStack::push(Node*, Matcher::Node_State)
+63
+Function:::: Matcher::is_visited(Node*)
+198
+Function:::: Matcher::number_of_projections() const
+261
+Function:::: Matcher::set_shared(Node*)
+197
+Function:::: Matcher::MStack::parent()
+75
+Function:::: Matcher::MStack::push(Node*, Matcher::Node_State, Node*, int)
+66
+Function:::: Matcher::is_shared(Node*)
+196
+Function:::: Matcher::is_dontcare(Node*)
+200
+Function:::: Matcher::get_projection(unsigned int)
+247
+Function:::: Matcher::MStack::MStack(int)
+60
+Function:::: Matcher::has_new_node(Node const*) const
+154
+Function:::: Matcher::push_projection(Node*)
+252
+Function:::: Matcher::set_visited(Node*)
+199
+Function:::: Matcher::grow_new_node_array(unsigned int)
+151
+File:::: src/hotspot/share/opto/subnode.hpp
+Function:::: BoolNode::bottom_type() const
+353
+Function:::: BoolNode::BoolNode(Node*, BoolTest::mask)
+341
+Function:::: BoolNode::match_edge(unsigned int) const
+354
+Function:::: SubNode::SubNode(Node*, Node*)
+42
+Function:::: CmpNode::bottom_type() const
+142
+Function:::: SubINode::add_id() const
+77
+Function:::: BoolTest::is_canonical() const
+322
+Function:::: CmpINode::CmpINode(Node*, Node*)
+163
+Function:::: BoolNode::ideal_reg() const
+355
+Function:::: BoolTest::negate() const
+321
+Function:::: BoolTest::commute() const
+320
+Function:::: CmpUNode::CmpUNode(Node*, Node*)
+177
+Function:::: CmpNode::ideal_reg() const
+143
+Function:::: CmpPNode::CmpPNode(Node*, Node*)
+192
+Function:::: CmpNode::CmpNode(Node*, Node*)
+137
+File:::: src/hotspot/share/opto/parse.hpp
+Function:::: Parse::do_getstatic()
+506
+Function:::: Parse::Block::is_invariant_local(unsigned int) const
+221
+221->222
+Function:::: InlineTree::forced_inline() const
+132
+Function:::: Parse::wrote_stable() const
+371
+Function:::: Parse::Block::rpo() const
+213
+Function:::: InlineTree::count_inline_bcs() const
+118
+Function:::: Parse::Block::start_sp() const
+214
+Function:::: Parse::Block::has_predicates() const
+200
+Function:::: InlineTree::stack_depth() const
+92
+Function:::: Parse::Block::next_path_num()
+248
+Function:::: InlineTree::set_msg(char const*)
+94
+Function:::: Parse::flow() const
+362
+Function:::: Parse::Block::is_parsed() const
+174
+Function:::: Parse::failing()
+395
+Function:::: Parse::Block::start() const
+211
+Function:::: InlineTree::inline_level() const
+91
+Function:::: Parse::Block::is_handler() const
+175
+Function:::: Parse::is_normal_parse() const
+388
+Function:::: Parse::set_block(Parse::Block*)
+0
+Function:::: Parse::Block::is_loop_head() const
+216
+Function:::: Parse::Block::flow() const
+171
+Function:::: Parse::store_state_to(Parse::Block*)
+421
+Function:::: Parse::rpo_at(int)
+399
+Function:::: Parse::block() const
+381
+Function:::: Parse::bc() const
+383
+Function:::: Parse::Block::is_SEL_head() const
+217
+Function:::: Parse::Block::can_elide_SEL_phi(unsigned int) const
+224
+Function:::: Parse::Block::preds_parsed() const
+0
+Function:::: Parse::Block::has_trap_at(int) const
+232
+Function:::: Parse::Block::is_merged() const
+183
+Function:::: Parse::successor_for_bci(int)
+406
+Function:::: Parse::Block::start_map() const
+0
+Function:::: Parse::iter()
+382
+Function:::: Parse::maybe_add_safepoint(int)
+483->484
+Function:::: Parse::Block::pred_count() const
+172
+Function:::: Parse::do_getfield()
+507
+Function:::: Parse::Block::is_SEL_backedge(Parse::Block*) const
+218
+Function:::: Parse::is_osr_parse() const
+389
+Function:::: Parse::Block::successor_at(int) const
+0
+Function:::: Parse::exits()
+366
+File:::: src/hotspot/share/opto/subtypenode.hpp
+Function:::: SubTypeCheckNode::SubTypeCheckNode(Compile*, Node*, Node*)
+42
+File:::: make/hotspot/src/hotspot/share/opto/phaseX.cpp
+Function:::: PhasePeephole::do_transform()
+0->2184
+Function:::: Node::replace_by(Node*)
+2249->2254->2255->2257->2260->2262
+Function:::: PhaseTransform::PhaseTransform(Phase::PhaseNumber)
+590
+Function:::: PhaseTransform::find_int_type(Node*)
+641->645->647->648
+641->647->648
+Function:::: PhaseTransform::intcon(int)
+779->784->789
+779->789
+784
+Function:::: PhasePeephole::PhasePeephole(PhaseRegAlloc*, PhaseCFG&)
+2108
+Function:::: PhaseValues::PhaseValues(Arena*, unsigned int)
+710
+Function:::: Node::req() const
+0
+Function:::: PhaseTransform::PhaseTransform(Arena*, Phase::PhaseNumber)
+606
+Function:::: PhaseGVN::transform(Node*)
+844
+Function:::: PhaseGVN::apply_ideal(Node*, bool)
+833
+Function:::: PhaseTransform::zerocon(BasicType)
+821->827
+Function:::: NodeHash::NodeHash(Arena*, unsigned int)
+65->68->76
+Function:::: PhaseTransform::find_long_type(Node*)
+653->657->658
+Function:::: NodeHash::hash_find_insert(Node*)
+144
+Function:::: Type_Array::grow(unsigned int)
+2267
+Function:::: PhaseValues::uncached_makecon(Type const*)
+759->762->772
+Function:::: PhaseTransform::makecon(Type const*)
+743->750->752->753
+743->753
+Function:::: PhaseTransform::longcon(long)
+795->805
+795->797->805
+795->800->803->805
+Function:::: Node::set_req_X(unsigned int, Node*, PhaseGVN*)
+2237->2238->2242
+Function:::: PhaseGVN::transform_no_reclaim(Node*)
+855->877->887->892->898->914
+855->877->892->898->914
+855->877->892->898->905->914
+855->877->887->892->898->905->914
+File:::: src/hotspot/share/opto/coalesce.hpp
+Function:::: PhaseCoalesce::lrgs(unsigned int)
+58
+Function:::: PhaseCoalesce::PhaseCoalesce(PhaseChaitin&)
+45
+Function:::: PhaseAggressiveCoalesce::verify()
+78
+File:::: make/hotspot/src/hotspot/share/opto/phase.cpp
+Function:::: Phase::Phase(Phase::PhaseNumber)
+43
+File:::: src/hotspot/share/opto/node.hpp
+Function:::: Node::last_out(Node**) const
+0
+Function:::: Node_Stack::is_empty() const
+1722
+Function:::: Node::remove_flag(unsigned int)
+816
+Function:::: Node::is_MachCallNative() const
+894
+Function:::: Node::is_MachCallJava() const
+896
+Function:::: Node_List::remove(unsigned int)
+0
+Function:::: Node::is_NeverBranch() const
+921
+Function:::: Node::is_Copy() const
+0
+Function:::: Node::is_scheduled() const
+998
+Function:::: Node_Stack::index() const
+1707
+Function:::: Node::is_Mach() const
+891
+Function:::: Node::is_MachNullCheck() const
+905
+Function:::: PhaseCFG::schedule_early(VectorSet&, Node_Stack&)
+0
+Function:::: Node::is_memory_writer() const
+1172
+Function:::: Node_Stack::Node_Stack(int)
+1676
+Function:::: Node_Stack::node() const
+1700
+Function:::: Node_Stack::set_node(Node*)
+1714
+Function:::: Node::flags() const
+0
+Function:::: Node::is_LoadStore() const
+887
+Function:::: Node_Array::operator[](unsigned int) const
+1548
+Function:::: Node_Stack::set_index(unsigned int)
+1717
+Function:::: Node_Stack::push(Node*, unsigned int)
+1696
+Function:::: Node::is_MachCallRuntime() const
+898
+Function:::: Node::is_cisc_alternate() const
+1169
+Function:::: Node::is_EncodePKlass() const
+0
+Function:::: Node_List::size() const
+0->1590
+Function:::: Node::is_DecodeN() const
+0
+Function:::: Node::set_prec(unsigned int, Node*)
+556
+556->564
+Function:::: Node_List::insert(unsigned int, Node*)
+0
+Function:::: Node::is_CallNative() const
+848
+Function:::: Node::is_MachTemp() const
+0->910
+Function:::: Node::clear_flag(unsigned int)
+806
+Function:::: Node_List::pop()
+1580
+Function:::: Node::is_SpillCopy() const
+950
+Function:::: Node::is_MemBar() const
+914
+Function:::: Node_Stack::pop()
+1690
+Function:::: Unique_Node_List::push(Node*)
+1609->1610
+Function:::: Node::is_DecodeNarrowPtr() const
+0
+Function:::: Node::is_Catch() const
+855
+Function:::: Node::raw_out(unsigned int) const
+398
+Function:::: Compile::build_start_state(StartNode*, TypeFunc const*)
+0
+Function:::: Node_List::copy(Node_List const&)
+1586->1587
+Function:::: Node::is_Con() const
+953
+Function:::: Node_Array::Node_Array(Arena*, unsigned int)
+1541->1542
+1542
+Function:::: Node::outcnt() const
+341
+Function:::: Unique_Node_List::Unique_Node_List(Arena*)
+1602
+Function:::: Node::is_MachProj() const
+906
+Function:::: Node::is_AddP() const
+0
+Function:::: Node::is_MachCall() const
+893
+Function:::: Node::fast_out(Node**) const
+379
+Function:::: Node::close_prec_gap_at(unsigned int)
+529
+Function:::: Node::find_int_con(int) const
+0->1120
+0
+Function:::: Node::is_BaseCountedLoopEnd() const
+844
+Function:::: Node::is_Call() const
+0
+Function:::: Node::is_top() const
+475
+Function:::: Node::is_Allocate() const
+840
+Function:::: TypeNode::set_type(Type const*)
+1819
+Function:::: Node::len() const
+339
+Function:::: Node::is_ConstraintCast() const
+861
+Function:::: Node::is_MergeMem() const
+916
+Function:::: Compile::record_for_igvn(Node*)
+1651
+Function:::: Node::in(unsigned int) const
+393
+Function:::: Node_Stack::size() const
+1720
+Function:::: Node::is_Proj() const
+0->928
+928
+Function:::: Node::is_Loop() const
+0
+Function:::: Node::is_CallStaticJava() const
+854
+Function:::: Node::is_DecodeNKlass() const
+0
+Function:::: Node::is_Type() const
+937
+Function:::: Node::set_req(unsigned int, Node*)
+438->440
+Function:::: Node_List::push(Node*)
+1578
+Function:::: Node::is_Load() const
+886
+Function:::: Node::fast_outs(Node**&) const
+373->375
+373
+375
+Function:::: Node_List::Node_List(Arena*, unsigned int)
+1569
+Function:::: Node::is_macro() const
+986
+Function:::: Node::del_out(Node*)
+505
+505->510
+Function:::: Node::is_MachBranch() const
+892
+Function:::: Node::is_Multi() const
+919
+Function:::: Node::add_flag(unsigned int)
+814
+Function:::: Node::is_expensive() const
+988
+Function:::: Node::is_Region() const
+929
+Function:::: Node::is_reduction() const
+992
+Function:::: Node::req() const
+338
+Function:::: Node::is_Cmp() const
+864
+Function:::: Node::for_post_loop_opts_igvn() const
+0
+Function:::: Node::is_Mem() const
+913
+Function:::: Node::init_flags(unsigned int)
+802
+Function:::: TypeNode::TypeNode(Type const*, unsigned int)
+1824
+Function:::: Node::is_SubTypeCheck() const
+0
+Function:::: Node::add_out(Node*)
+499->500
+499->500->501
+499->501->502
+499->501
+499->500->501->502
+499
+Function:::: Node_Array::map(unsigned int, Node*)
+1552
+Function:::: Node::is_ArrayCopy() const
+842
+Function:::: Node::eqv_uncast(Node const*, bool) const
+484
+Function:::: Node::is_Move() const
+0
+Function:::: Node::is_BaseCountedLoop() const
+0
+Function:::: Node::is_SafePoint() const
+931
+Function:::: Node::is_Phi() const
+927
+Function:::: Node::is_block_start() const
+975->978
+Function:::: Node::is_CallRuntime() const
+0
+Function:::: Node::operator new(unsigned long)
+243
+Function:::: TypeNode::type() const
+1823
+Function:::: Node::is_MachSafePoint() const
+908
+Function:::: Node::swap_edges(unsigned int, unsigned int)
+575
+Function:::: Node_Array::at(unsigned int) const
+0->1549
+0
+Function:::: Node::last_outs(Node**&) const
+383
+Function:::: Node::is_Store() const
+934
+0
+Function:::: Node::is_CastII() const
+858
+Function:::: Node::is_MachGoto() const
+902
+Function:::: Node::init_req(unsigned int, Node*)
+452
+Function:::: Node::is_EncodeP() const
+0
+Function:::: Node::is_If() const
+876
+Function:::: Node::is_Start() const
+933
+0
+Function:::: Node_List::Node_List(unsigned int)
+1568
+Function:::: Node_Stack::is_nonempty() const
+1721
+File:::: make/hotspot/src/hotspot/share/opto/type.cpp
+Function:::: TypeOopPtr::xdual() const
+3290
+Function:::: TypeKlassPtr::get_con() const
+5297->5309
+Function:::: TypeRawPtr::hash() const
+3073
+Function:::: TypeVect::xdual() const
+2424
+Function:::: TypePtr::make(Type::TYPES, TypePtr::PTR, int, TypePtr const*, int)
+2510
+Function:::: _GLOBAL__sub_I_type.cpp
+0
+Function:::: TypeRawPtr::make(TypePtr::PTR)
+2961
+Function:::: TypeD::xdual() const
+1333
+Function:::: Type::array_element_basic_type() const
+148->150->151->152
+Function:::: Type::make(Type::TYPES)
+392
+Function:::: TypePtr::would_improve_ptr(ProfilePtrKind) const
+2874->2897
+Function:::: Type::xdual() const
+1000
+Function:::: TypeMetadataPtr::make(TypePtr::PTR, ciMetadata*, int)
+4955
+Function:::: TypeOopPtr::make(TypePtr::PTR, int, int, TypePtr const*, int)
+3175
+Function:::: TypeMetadataPtr::hash() const
+4784->4785
+Function:::: TypeVect::hash() const
+2437
+Function:::: TypeMetadataPtr::xdual() const
+4918
+Function:::: Type::has_memory() const
+1005
+Function:::: TypeF::xdual() const
+1225
+Function:::: TypeAry::xdual() const
+2219->2220->2221
+Function:::: TypeNarrowKlass::make(TypePtr const*)
+4756
+Function:::: TypeVect::make(Type const*, unsigned int)
+2349
+Function:::: TypeAryPtr::xmeet_helper(Type const*) const
+4313->4362->4363->4365->4373->4376->4378->4525
+Function:::: TypeKlassPtr::cast_to_exactness(bool) const
+5137->5138->5139
+Function:::: TypeRawPtr::xmeet(Type const*) const
+2988->3021->3025->3034
+Function:::: TypePtr::get_con() const
+2523
+Function:::: TypeD::hash() const
+1347
+Function:::: Type::make_from_constant(ciConstant, bool, int, bool, bool)
+238
+Function:::: TypeKlassPtr::eq(Type const*) const
+4987->4988
+4987
+Function:::: TypeInt::make(int, int, int)
+1455
+1454->1455
+Function:::: normalize_int_widen(int, int, int)
+0
+0->1448
+0->1443
+Function:::: TypeRawPtr::get_con() const
+2981
+Function:::: TypeAryPtr::add_offset(long) const
+4597
+Function:::: TypePtr::hash() const
+2648
+Function:::: TypeInstPtr::hash() const
+4055
+Function:::: TypeVect::eq(Type const*) const
+2431
+Function:::: TypeLong::xdual() const
+1763->1764
+Function:::: TypeTuple::make(unsigned int, Type const**)
+2052
+Function:::: TypeOopPtr::meet_instance_id(int) const
+3566
+3567
+Function:::: TypeAry::cleanup_speculative() const
+2250
+Function:::: TypeTuple::xdual() const
+2101->2103->2104
+Function:::: TypeInstPtr::xdual() const
+4040
+Function:::: TypeTuple::fields(unsigned int)
+2059
+Function:::: TypeAry::make(Type const*, TypeInt const*, bool)
+2182->2186
+Function:::: TypeKlassPtr::singleton() const
+5003
+Function:::: TypeF::eq(Type const*) const
+1233
+Function:::: TypeLong::hash() const
+1879
+Function:::: TypeNarrowPtr::hash() const
+4625
+Function:::: Type::singleton() const
+1047
+Function:::: Type::uhash(Type const*)
+412
+Function:::: TypeOopPtr::dual_instance_id() const
+3575
+Function:::: check_mismatched_access(ciConstant, BasicType, bool)
+0->287
+0
+Function:::: TypeAryPtr::make(TypePtr::PTR, TypeAry const*, ciKlass*, bool, int, int, TypePtr const*, int)
+0->4163
+4163
+Function:::: TypeOopPtr::hash() const
+3481
+Function:::: Type::get_const_type(ciType*)
+136->139
+136->141
+141
+Function:::: TypeInstPtr::add_offset(long) const
+4114->4115
+Function:::: TypePtr::dual_speculative() const
+2695
+Function:::: TypeInt::eq(Type const*) const
+1609
+Function:::: TypeLong::make(long)
+1697
+Function:::: TypePtr::xmeet_speculative(TypePtr const*) const
+2707
+Function:::: Type::xmeet(Type const*) const
+908->985
+908
+Function:::: TypeAryPtr::hash() const
+4306
+Function:::: TypeMetadataPtr::eq(Type const*) const
+4771->4778
+Function:::: TypeAry::ary_must_be_exact() const
+2308
+2308->2311->2312->2316->2317->2319->2321->2322->2326->2335
+2308->2311->2314->2335
+Function:::: TypePtr::empty() const
+0->2949
+2949
+Function:::: TypePtr::meet_inline_depth(int) const
+2747
+Function:::: TypePtr::meet_offset(int) const
+2595
+Function:::: TypeNarrowPtr::empty() const
+4633
+Function:::: TypeFunc::eq(Type const*) const
+5406->5407
+5406
+Function:::: Type::hash() const
+764
+Function:::: normalize_long_widen(long, long, int)
+0->1703
+0
+Function:::: TypeAryPtr::eq(Type const*) const
+4299
+Function:::: TypeLong::empty() const
+1951
+Function:::: TypeInstPtr::eq(Type const*) const
+4048->4049
+4048
+Function:::: __cxx_global_var_init
+0
+Function:::: TypePtr::cleanup_speculative() const
+2668
+Function:::: TypePtr::speculative_type() const
+2794->2801
+Function:::: TypeInt::xmeet(Type const*) const
+1464->1496->1497
+1464->1497
+1464
+Function:::: TypeFunc::xdual() const
+5399
+Function:::: TypeFunc::make(TypeTuple const*, TypeTuple const*)
+5355
+Function:::: TypeInstPtr::remove_speculative() const
+4119
+Function:::: TypePtr::xmeet(Type const*) const
+2529->2535->2548
+2529->2548
+Function:::: TypeInt::TypeInt(int, int, int)
+1432
+Function:::: Type::Initialize_shared(Compile*)
+426->581->582->583->584->585->586->587->602->603->605->608->610->613->615->618->620->623->625->628->664->672->673->675->676->678->679->681->682->684->685->688
+Function:::: TypeAryPtr::remove_speculative() const
+4601
+Function:::: TypePtr::eq_speculative(TypePtr const*) const
+2756
+Function:::: TypeKlassPtr::TypeKlassPtr(TypePtr::PTR, ciKlass*, int)
+4968
+Function:::: TypeInt::hash() const
+1615
+Function:::: TypeAry::eq(Type const*) const
+2228->2229->2230
+2228
+2228->2230
+Function:::: Type::Initialize(Compile*)
+704->711->712
+704->708->711->712
+Function:::: TypePtr::remove_speculative() const
+2656
+Function:::: TypeInstPtr::TypeInstPtr(TypePtr::PTR, ciKlass*, bool, ciObject*, int, int, TypePtr const*, int)
+3607
+Function:::: TypeAryPtr::compute_klass() const
+5040->5046->5055
+Function:::: TypeInt::make(int)
+1437
+Function:::: Type::filter_helper(Type const*, bool) const
+989
+Function:::: TypeKlassPtr::hash() const
+4994
+Function:::: TypeLong::singleton() const
+1947
+Function:::: TypeFunc::hash() const
+5413
+Function:::: TypeOopPtr::filter_helper(Type const*, bool) const
+3418->3452->3453->3454->3460
+3418->3452->3460
+3418->3452->3453->3460
+3418->3460
+Function:::: TypePtr::dual_inline_depth() const
+2738
+Function:::: TypeKlassPtr::make(TypePtr::PTR, ciKlass*, int)
+4977
+Function:::: TypeLong::TypeLong(long, long, int)
+1692
+Function:::: TypeOopPtr::cleanup_speculative() const
+3539->3543
+Function:::: TypeAryPtr::make(TypePtr::PTR, ciObject*, TypeAry const*, ciKlass*, bool, int, int, TypePtr const*, int, bool)
+0->4175
+Function:::: Type::maybe_remove_speculative(bool) const
+404->405
+404
+Function:::: TypeAryPtr::empty() const
+4591->4592->4593
+Function:::: TypeInt::singleton() const
+1671
+Function:::: normalize_array_size(TypeInt const*)
+2174->2175
+2174
+Function:::: TypeRawPtr::xdual() const
+3039
+Function:::: TypeKlassPtr::xdual() const
+5289
+Function:::: TypeTuple::make_domain(ciInstanceKlass*, ciSignature*)
+0->2034->2048
+0->2010->2012->2018->2048
+Function:::: TypeD::eq(Type const*) const
+1341
+Function:::: TypePtr::xadd_offset(long) const
+0->2624
+0
+Function:::: TypePtr::eq(Type const*) const
+2642
+Function:::: TypeRawPtr::eq(Type const*) const
+3067
+Function:::: TypeRawPtr::make(unsigned char*)
+2966
+Function:::: Type::cmp(Type const*, Type const*)
+397->401
+400
+Function:::: TypeInt::empty() const
+1675
+Function:::: TypeAry::empty() const
+2300
+Function:::: TypeNarrowOop::cleanup_speculative() const
+4743
+Function:::: Type::meet_helper(Type const*, bool) const
+865->874->877->902
+865->877->902
+Function:::: TypeOopPtr::singleton() const
+3513
+Function:::: TypeTuple::singleton() const
+2156
+Function:::: Type::hashcons()
+722
+Function:::: TypeF::hash() const
+1239
+Function:::: TypeD::make(double)
+1286
+Function:::: TypePtr::speculative_maybe_null() const
+2807->2812
+2807
+Function:::: TypeVectMask::eq(Type const*) const
+2483
+Function:::: TypeLong::eq(Type const*) const
+1873
+Function:::: TypeNarrowPtr::xdual() const
+4653
+Function:::: TypeAryPtr::klass() const
+5092->5095->5097->5111->5118
+5092
+Function:::: TypeOopPtr::would_improve_type(ciKlass*, int) const
+0->3594
+Function:::: TypeOopPtr::TypeOopPtr(Type::TYPES, TypePtr::PTR, ciKlass*, bool, ciObject*, int, int, TypePtr const*, int)
+3093->3132->3149->3151->3166
+3093->3166
+3093
+Function:::: TypeInt::filter_helper(Type const*, bool) const
+1594->1597->1603
+Function:::: TypeOopPtr::make_from_klass_common(ciKlass*, bool, bool)
+3296->3323->3333->3335->3339->3345
+3296->3322->3345
+3296->3333->3335->3339->3345
+Function:::: Type::eq(Type const*) const
+758
+Function:::: TypeTuple::make_range(ciSignature*)
+1972->1974->1992->1999
+Function:::: TypeInstPtr::cast_to_ptr_type(TypePtr::PTR) const
+3672->3676
+3672->3675->3676
+Function:::: TypeMetadataPtr::TypeMetadataPtr(TypePtr::PTR, ciMetadata*, int)
+4941
+Function:::: TypeOopPtr::eq(Type const*) const
+3466->3475
+3466
+Function:::: TypeLong::xmeet(Type const*) const
+1725
+1725->1757->1758
+Function:::: TypeNarrowPtr::singleton() const
+4629
+Function:::: Type::get_typeflow_type(ciType*)
+190->229->231
+Function:::: TypeTuple::hash() const
+2121->2123->2124
+2121->2124
+Function:::: TypeFunc::make(ciMethod*)
+5360->5370->5373
+5360->5373
+Function:::: TypeInstPtr::make(TypePtr::PTR, ciKlass*, bool, ciObject*, int, int, TypePtr const*, int)
+0->3642
+0->3634->3636->3637->3642
+0->3636->3637->3642
+Function:::: Type::get_arrays_base_elements(Type const*, Type const*, TypeInstPtr const**, TypeInstPtr const**)
+165->166->167->168->170->185
+Function:::: TypePtr::xmeet_helper(Type const*) const
+2552->2583->2589
+2552->2555->2583->2589
+Function:::: TypePtr::singleton() const
+2945
+Function:::: TypeVectMask::xdual() const
+2487
+Function:::: TypeRawPtr::add_offset(long) const
+3044
+3044->3061
+Function:::: TypeInstPtr::cast_to_exactness(bool) const
+3681->3682->3684->3687
+3681
+Function:::: Type::make_constant_from_field(ciField*, ciInstance*, BasicType, bool)
+348->352->355->386
+348->371->373->378->386
+Function:::: TypeInt::xdual() const
+1502->1503
+Function:::: TypeAry::hash() const
+2236
+Function:::: Type::empty() const
+1053
+Function:::: TypeF::make(float)
+1175
+Function:::: TypeLong::make(long, long, int)
+1715
+1714->1715
+Function:::: TypePtr::dual_offset() const
+2603
+Function:::: TypeAryPtr::xdual() const
+4530
+Function:::: TypeTuple::eq(Type const*) const
+2111->2113->2116
+Function:::: TypePtr::xdual() const
+2614
+Function:::: TypeLong::filter_helper(Type const*, bool) const
+1858->1861->1867
+1858->1859->1861->1867
+Function:::: TypeInstPtr::xmeet_helper(Type const*) const
+3748
+3748->3751->3808->3809->3812->3819->4021
+3748->3808->3809->3812->3815->3819->4021
+Function:::: TypeNarrowOop::make(TypePtr const*)
+4735
+Function:::: TypeKlassPtr::as_instance_type() const
+5146
+5146->5151
+Function:::: TypeAry::xmeet(Type const*) const
+2193
+Function:::: TypeNarrowPtr::eq(Type const*) const
+4641->4646->4649
+File:::: src/hotspot/share/opto/callnode.hpp
+Function:::: SafePointNode::merge_replaced_nodes_with(SafePointNode*)
+472
+Function:::: JVMState::caller() const
+254
+Function:::: StartNode::pinned() const
+73
+Function:::: ReturnNode::ideal_reg() const
+128
+Function:::: JVMState::loc_size() const
+238
+Function:::: SafePointNode::control() const
+422
+Function:::: SafePointNode::jvms() const
+355
+Function:::: ReturnNode::hash() const
+124
+Function:::: JVMState::endoff() const
+235
+Function:::: CallStaticJavaNode::CallStaticJavaNode(TypeFunc const*, unsigned char*, char const*, TypePtr const*)
+732
+Function:::: ParmNode::ParmNode(StartNode*, unsigned int)
+103
+Function:::: AllocateNode::Ideal_klass(Node*, PhaseTransform*)
+974
+Function:::: CallNode::tf() const
+607
+Function:::: JVMState::map() const
+255
+Function:::: CallNode::generator() const
+610
+Function:::: JVMState::set_map(SafePointNode*)
+293
+Function:::: CallNode::Identity(PhaseGVN*)
+620
+Function:::: SafePointNode::clone_replaced_nodes()
+457
+Function:::: JVMState::depth() const
+256
+Function:::: JVMState::debug_size() const
+260
+Function:::: SafePointNode::memory() const
+424
+Function:::: SafePointNode::set_argument(JVMState*, unsigned int, Node*)
+407
+Function:::: JVMState::locoff() const
+230
+Function:::: SafePointNode::set_stack(JVMState*, unsigned int, Node*)
+403
+Function:::: SafePointNode::needs_deep_clone_jvms(Compile*)
+356
+Function:::: JVMState::set_should_reexecute(bool)
+298
+Function:::: SafePointNode::set_jvms(JVMState*)
+341
+Function:::: SafePointNode::has_ea_local_in_scope() const
+481
+Function:::: SafePointNode::set_i_o(Node*)
+429
+Function:::: SafePointNode::bottom_type() const
+490
+Function:::: SafePointNode::set_memory(Node*)
+430
+Function:::: JVMState::monoff() const
+233
+Function:::: JVMState::set_bci(int)
+297
+Function:::: JVMState::is_stk(unsigned int) const
+244
+Function:::: JVMState::operator new(unsigned long, Compile*)
+220
+Function:::: JVMState::method() const
+253
+Function:::: CallRuntimeNode::CallRuntimeNode(TypeFunc const*, unsigned char*, char const*, TypePtr const*, JVMState*)
+795
+Function:::: JVMState::bci() const
+249
+Function:::: CallJavaNode::CallJavaNode(TypeFunc const*, unsigned char*, ciMethod*)
+684
+Function:::: TailJumpNode::TailJumpNode(Node*, Node*, Node*, Node*, Node*, Node*)
+176->177->178->179
+Function:::: JVMState::set_endoff(unsigned int)
+0
+Function:::: AllocateArrayNode::Ideal_array_allocation(Node*, PhaseTransform*)
+1044
+Function:::: SafePointNode::SafePointNode(unsigned int, JVMState*, TypePtr const*)
+347
+Function:::: SafePointNode::set_control(Node*)
+428
+Function:::: StartNode::StartNode(Node*, TypeTuple const*)
+67->69->70->71
+69->70
+Function:::: JVMState::is_mon(unsigned int) const
+245
+Function:::: JVMState::stkoff() const
+0->231
+0
+Function:::: JVMState::scloff() const
+0
+Function:::: CallNode::set_cnt(float)
+614
+Function:::: JVMState::is_loc(unsigned int) const
+243
+Function:::: SafePointNode::clone_jvms(Compile*)
+358->363
+Function:::: JVMState::oopoff() const
+236
+Function:::: SafePointNode::ensure_stack(JVMState*, unsigned int)
+412
+Function:::: TailCallNode::TailCallNode(Node*, Node*, Node*, Node*, Node*, Node*, Node*)
+163->164
+Function:::: JVMState::mon_size() const
+240
+Function:::: SafePointNode::adr_type() const
+491
+Function:::: CallNode::ideal_reg() const
+625
+Function:::: CallNode::CallNode(TypeFunc const*, unsigned char*, TypePtr const*, JVMState*)
+597
+Function:::: CallNode::guaranteed_safepoint()
+628
+Function:::: CallLeafNode::CallLeafNode(TypeFunc const*, unsigned char*, char const*, TypePtr const*)
+816
+Function:::: JVMState::is_monitor_use(unsigned int) const
+280
+Function:::: StartNode::ideal_reg() const
+81
+Function:::: JVMState::nof_monitors() const
+272
+File:::: src/hotspot/share/opto/phaseX.hpp
+Function:::: PhaseTransform::type(Node const*) const
+226
+Function:::: PhaseTransform::find_long_con(Node*, long)
+269
+Function:::: PhaseTransform::ensure_type_or_null(Node const*)
+257
+Function:::: PhaseTransform::set_type(Node const*, Type const*)
+239
+Function:::: Type_Array::fast_lookup(unsigned int) const
+0
+Function:::: PhaseValues::hash_find_insert(Node*)
+384
+Function:::: PhaseTransform::type_or_null(Node const*) const
+234
+Function:::: PhaseValues::is_IterGVN()
+0
+Function:::: PhaseTransform::find_int_con(Node*, int)
+266
+Function:::: Type_Array::map(unsigned int, Type const*)
+136
+Function:::: PhaseTransform::set_type_bottom(Node const*)
+252
+Function:::: GraphKit::make_runtime_call(int, TypeFunc const*, unsigned char*, char const*, TypePtr const*, Node*, Node*, Node*, Node*, Node*, Node*, Node*, Node*)
+0
+Function:::: PhaseValues::saturate(Type const*, Type const*, Type const*) const
+398
+Function:::: NodeHash::check_grow()
+75
+File:::: src/hotspot/share/opto/rootnode.hpp
+Function:::: RootNode::is_block_proj() const
+43
+Function:::: RootNode::bottom_type() const
+44
+Function:::: RootNode::RootNode()
+37
+File:::: make/hotspot/src/hotspot/share/opto/c2compiler.cpp
+Function:::: C2Compiler::initial_code_buffer_size(int)
+712
+Function:::: C2Compiler::init_c2_runtime()
+61->65->67->73
+Function:::: C2Compiler::compile_method(ciEnv*, ciMethod*, int, bool, DirectiveSet*)
+101->105->107
+Function:::: C2Compiler::initialize()
+90->91->95
+90->95
+File:::: src/hotspot/share/opto/callGenerator.hpp
+Function:::: InlineCallGenerator::is_inline() const
+200
+Function:::: CallGenerator::is_string_late_inline() const
+78
+Function:::: CallGenerator::method() const
+53
+Function:::: InlineCallGenerator::InlineCallGenerator(ciMethod*)
+197
+Function:::: CallGenerator::CallGenerator(ciMethod*)
+43
+Function:::: CallGenerator::operator new(unsigned long)
+97
+File:::: make/hotspot/src/hotspot/share/opto/parse1.cpp
+Function:::: Parse::fetch_interpreter_state(int, BasicType, Node*, Node*)
+109->117->139
+Function:::: Parse::init_blocks()
+1260->1265->1266->1270->1271->1274
+1260->1266->1270->1271->1274
+Function:::: Parse::ensure_phi(int, bool)
+1975->1983->1986->2001->2002->2018
+1975
+Function:::: Parse::Block::init_graph(Parse*)
+1302->1308->1335
+Function:::: Parse::return_current(Node*)
+2204->2255->2261->2264->2268->2271
+2204->2255->2261->2264->2265->2271
+Function:::: Parse::Block::record_state(Parse*)
+1489
+Function:::: Parse::check_interpreter_type(Node*, Type const*, SafePointNode*&)
+151->155->171->173
+Function:::: Parse::merge(int)
+0->1602->1603->1605->1607
+1602->1605
+Function:::: Parse::merge_memory_edges(MergeMemNode*, int, bool)
+0
+Function:::: Parse::build_exits()
+764->798->801->802->803->807->810
+764->785->801->802->803->807->810
+764->785->790->798->801->802->803->807->810
+Function:::: Parse::add_safepoint()
+2280->2315->2318->2320->2324->2326->2328
+Function:::: Compile::build_start_state(StartNode*, TypeFunc const*)
+817
+Function:::: Parse::ensure_memory_phi(int, bool)
+2023->2031->2033->2036->2039->2055
+2023->2031->2033->2055
+2023
+Function:::: Parse::load_state_from(Parse::Block*)
+1478
+Function:::: Parse::do_exceptions()
+908->934
+908
+Function:::: Parse::ensure_phis_everywhere()
+1891->1922->1925
+Function:::: Parse::load_interpreter_state(Node*)
+189->208->217->224->255->263
+189->273->275->283->294->304->315->325->333
+189->338->340->341->342->347
+Function:::: mask_int_value(Node*, BasicType, PhaseGVN*)
+752
+Function:::: Parse::Block::successor_for_bci(int)
+1340
+0->1340->1352
+Function:::: Parse::merge_common(Parse::Block*, int)
+1654->1669->1670->1671->1672->1699->1825
+1654->1806->1811->1825
+1654->1669->1675->1676->1678->1686->1688->1689->1690->1693->1694->1695->1699->1825
+1654->1661->1669->1670->1671->1672->1699->1825
+Function:::: Parse::do_all_blocks()
+0->704
+0->641->736
+0->641->642->646->652->662
+0->667->671->678->679
+0->679
+0->692
+0->681->682->683
+0->642->646->652->662->692
+0->667->671->674
+0->641->642->646->652->662->692
+Function:::: Parse::Parse(JVMState*, ciMethod*, float)
+391->503->539->544->557->562->565->568->574->592->598->617->623->632
+391->503->539->544->557->562->565->568->574->592->598
+391->503->504->519->539->544->557->562->565->568->569->570->571
+391->503->539->544->557->562->565->568->574->576->581->582->588->592->598
+391->503->539->544
+391->503->539->544->557->562->565->568->574->576->581->582->588->592->598->617->623
+Function:::: Parse::Block::local_type_at(int) const
+1365->1371->1373
+1365->1373
+1364->1373
+1365->1370->1373
+1365->1371
+Function:::: Parse::create_entry_map()
+1120->1130->1144->1145->1147->1153->1159->1162->1171->1172->1173->1177->1178->1181->1183
+1120->1127->1144->1145->1147->1153->1159->1162->1165->1171->1172->1173->1177->1178->1181->1183
+1120->1144->1145->1147->1153->1159->1162->1171->1172->1173->1177->1178->1181->1183
+1120->1130
+Function:::: Parse::make_node_notes(Node_Notes*)
+850
+850->858
+Function:::: Parse::Block::Block(Parse*, int)
+1295
+Function:::: Parse::do_one_block()
+1510->1557->1558->1563->1575
+1510->1557
+Function:::: Parse::rtm_deopt()
+2143->2174
+Function:::: Parse::set_parse_bci(int)
+1580
+Function:::: Parse::do_method_entry()
+1189->1227->1253
+1189->1190->1227->1253
+Function:::: Parse::do_exits()
+963->967->970->1000
+963->1041->1050->1051->1052->1054->1063->1066->1105->1111->1112
+File:::: make/hotspot/src/hotspot/share/opto/addnode.cpp
+Function:::: AddNode::add_of_identity(Type const*, Type const*) const
+245->247->250
+Function:::: AddPNode::match_edge(unsigned int) const
+775
+Function:::: AddPNode::Ideal_base_and_offset(Node*, PhaseTransform*, long&)
+0->733->736->737
+0->736
+0->736->737
+0->733->737
+0->737
+Function:::: AddINode::Ideal(PhaseGVN*, bool)
+0
+Function:::: AddPNode::Identity(PhaseGVN*)
+615
+Function:::: AddINode::add_ring(Type const*, Type const*) const
+396
+Function:::: AddNode::hash() const
+51
+Function:::: AddPNode::Ideal(PhaseGVN*, bool)
+0->657->659->669->685
+0->657->669->685
+Function:::: commute(PhaseGVN*, Node*)
+66->132
+Function:::: AddNode::Ideal(PhaseGVN*, bool)
+137->182->199->217
+Function:::: AddPNode::Value(PhaseGVN*) const
+708->723
+Function:::: AddINode::Identity(PhaseGVN*)
+380->382->385->386
+Function:::: AddPNode::bottom_type() const
+690->694->699->703
+Function:::: AddNode::Value(PhaseGVN*) const
+224->240
+224->230->240
+Function:::: AddNode::Identity(PhaseGVN*)
+57->61
+57->59->61
+File:::: make/hotspot/src/hotspot/share/opto/matcher.cpp
+Function:::: State::State()
+2864
+Function:::: Matcher::find_shared_visit(Matcher::MStack&, Node*, unsigned int, bool&, int&)
+2169->2265->2272->2273->2276
+Function:::: Matcher::match()
+189->305->317->323->346->357->358->359->360->368->369->380->393->396->403->418
+Function:::: Matcher::ReduceInst(State*, int, Node*&)
+1750->1777->1814->1818->1839->1844->1850->1852->1857
+Function:::: Matcher::warp_outgoing_stk_arg(VMRegImpl*, int, int&)
+1200->1216
+Function:::: Matcher::warp_incoming_stk_arg(VMRegImpl*)
+138->150
+Function:::: Matcher::init_first_stack_mask()
+0->726->727
+Function:::: Matcher::specialize_generic_vector_operands()
+2668->2693
+Function:::: match_into_reg(Node const*, Node*, Node*, int, bool)
+0->1543
+0->1569
+0
+0->1546
+0->1559
+0->1559->1568->1569
+Function:::: Matcher::find_receiver()
+2031
+Function:::: __cxx_global_var_init.5
+52
+Function:::: Matcher::init_spill_mask(Node*)
+914
+Function:::: Matcher::match_tree(Node const*)
+1460->1525
+Function:::: Matcher::ReduceInst_Interior(State*, int, Node*&, MachNode*, unsigned int)
+1900->1908->1915->1956
+Function:::: Matcher::Matcher()
+63
+63->73
+Function:::: Matcher::collect_null_checks(Node*, Node*)
+2458->2466->2471->2481->2518
+Function:::: Matcher::clone_node(Node*, Node*, Matcher::MStack&)
+0
+Function:::: Matcher::find_shared(Node*)
+0->2082->2086->2090->2093->2100->2153->2159->2166
+Function:::: Matcher::find_shared_node(Node*, unsigned int)
+1696
+1696->1699->1700
+1696->1700
+Function:::: __cxx_global_var_init
+0
+Function:::: Matcher::Fixup_Save_On_Entry()
+738->829->830->910
+Function:::: _GLOBAL__sub_I_matcher.cpp
+0
+Function:::: Matcher::ReduceOper(State*, int, Node*&, MachNode*)
+1970
+Function:::: Matcher::ReduceInst_Chain_Rule(State*, int, Node*&, MachNode*)
+1869->1896
+Function:::: Matcher::validate_null_checks()
+2524->2545->2546->2552
+Function:::: Matcher::Label_Root(Node const*, State*, Node*, Node*&)
+1597->1673->1688
+Function:::: Matcher::xform(Node*, int)
+1067->1071->1072->1075->1081->1118->1122->1178->1188->1195
+Function:::: Matcher::is_vshift_con_pattern(Node*, Node*)
+0->2040
+Function:::: Matcher::is_save_on_entry(int)
+732
+Function:::: Matcher::handle_precedence_edges(Node*, MachNode*)
+1860
+Function:::: Matcher::find_shared_post_visit(Node*, unsigned int)
+2279
+Function:::: Matcher::specialize_vector_operand(MachNode*, unsigned int)
+0
+Function:::: Matcher::regmask_for_ideal_register(unsigned int, Node*)
+2569->2602->2604->2605
+Function:::: Matcher::specialize_mach_node(MachNode*)
+2658->2659
+2658
+Function:::: __cxx_global_var_init.4
+0
+Function:::: Matcher::match_sfpt(SafePointNode*)
+1233
+File:::: make/hotspot/src/hotspot/share/opto/replacednodes.cpp
+Function:::: ReplacedNodes::apply(Node*, unsigned int)
+0->96->107
+Function:::: ReplacedNodes::transfer_from(ReplacedNodes const&, unsigned int)
+0
+0->75->78
+0->78
+Function:::: ReplacedNodes::reset()
+89
+89->92
+Function:::: ReplacedNodes::record(Node*, Node*)
+56->59->61
+56->58->59->61
+Function:::: ReplacedNodes::merge_with(ReplacedNodes const&)
+0
+0->226
+Function:::: ReplacedNodes::clone()
+81
+Function:::: ReplacedNodes::has_node(ReplacedNodes::ReplacedNode const&) const
+42
+Function:::: ReplacedNodes::is_empty() const
+38
+Function:::: ReplacedNodes::allocate_if_necessary()
+32->33
+File:::: make/hotspot/src/hotspot/share/opto/block.cpp
+Function:::: Block::is_Empty() const
+163
+163->171
+163->184->189
+Function:::: PhaseBlockLayout::union_traces(Trace*, Trace*)
+1628->1647
+Function:::: Block_Array::grow(unsigned int)
+44->51->54
+Function:::: Block::is_trivially_unreachable() const
+155
+Function:::: Block::find_remove(Node const*)
+0->147
+Function:::: UnionFind::reset(unsigned int)
+1436->1438
+Function:::: PhaseCFG::fixup_flow()
+840
+Function:::: UnionFind::extend(unsigned int, unsigned int)
+1426->1430->1431
+Function:::: UnionFind::Find_compress(unsigned int)
+0
+Function:::: Block::code_alignment() const
+79->86
+Function:::: PhaseBlockLayout::merge_traces(bool)
+1699
+Function:::: PhaseCFG::build_cfg()
+0->413
+0->436->441->445
+0->455->456->462->463->464->473->480
+0->455->456->458->462->463->464->480
+0->455->456->458->462->463->464->480->483->487->489->496
+0->455->456->458->462->463->464->480->483->487->489->492->493->496
+Function:::: PhaseBlockLayout::PhaseBlockLayout(PhaseCFG&)
+1803->1843
+Function:::: UnionFind::Union(unsigned int, unsigned int)
+1476->1483
+Function:::: Trace::fixup_blocks(PhaseCFG&)
+1907
+Function:::: no_flip_branch(Block*)
+593->597->598->601->602->605->610
+Function:::: edge_order(CFGEdge**, CFGEdge**)
+1524->1534
+Function:::: PhaseCFG::is_uncommon(Block const*)
+225
+Function:::: Block::find_node(Node const*) const
+0->138->143
+Function:::: PhaseCFG::PhaseCFG(Arena*, RootNode*, Matcher&)
+375->398->401->403
+Function:::: PhaseBlockLayout::reorder_traces(int)
+1771->1799
+Function:::: PhaseBlockLayout::find_edges()
+1568->1624
+Function:::: PhaseCFG::remove_unreachable_blocks()
+996->1002->1007->1034
+Function:::: UnionFind::UnionFind(unsigned int)
+1418
+Function:::: PhaseBlockLayout::grow_traces()
+1655->1661->1672->1673->1678->1685->1686->1687->1688->1692
+Function:::: Block::has_uncommon_code() const
+200->204->206->217->218->219
+Function:::: PhaseCFG::remove_empty_blocks()
+730->768->769->776
+File:::: make/hotspot/src/hotspot/share/opto/parse3.cpp
+Function:::: Parse::do_get_xxx(Node*, ciField*, bool)
+0->109->127->128->146->149->161->167->171->175->198
+0->109->118->120->122->198
+0->109->118->120->127->128->146->149->161->167->171->175->198
+Function:::: Parse::do_field_access(bool, bool)
+45->78
+45->89->90->105
+45
+45->78->97
+File:::: make/hotspot/src/hotspot/share/opto/callnode.cpp
+Function:::: StartNode::calling_convention(BasicType*, VMRegPair*, unsigned int) const
+71
+Function:::: JVMState::debug_end() const
+333
+Function:::: ReturnNode::match_edge(unsigned int) const
+190
+Function:::: CallNode::bottom_type() const
+709
+Function:::: TailCallNode::match_edge(unsigned int) const
+252
+Function:::: JVMState::JVMState(ciMethod*, JVMState*)
+263->270
+Function:::: StartNode::bottom_type() const
+57
+Function:::: SafePointNode::size_of() const
+1374
+Function:::: CallNode::Value(PhaseGVN*) const
+711->712->713
+711->713
+Function:::: CallNode::Ideal(PhaseGVN*, bool)
+974
+Function:::: StartNode::size_of() const
+54
+Function:::: SafePointNode::Ideal(PhaseGVN*, bool)
+1406
+Function:::: JVMState::clone_shallow(Compile*) const
+602->603
+Function:::: CallStaticJavaNode::Ideal(PhaseGVN*, bool)
+1069->1097
+1069
+Function:::: ReturnNode::ReturnNode(unsigned int, Node*, Node*, Node*, Node*, Node*)
+170->171->172->173->174->175->176
+Function:::: TailJumpNode::match_edge(unsigned int) const
+258
+Function:::: JVMState::debug_depth() const
+0->340->342
+0->342
+Function:::: SafePointNode::set_next_exception(SafePointNode*)
+1382->1385->1387
+1382->1387
+1382->1383->1387
+Function:::: JVMState::bind_map(SafePointNode*)
+637
+Function:::: JVMState::JVMState(int)
+279
+Function:::: SafePointNode::grow_stack(JVMState*, unsigned int)
+1489->1495
+Function:::: SafePointNode::next_exception() const
+1392->1399
+1392
+Function:::: SafePointNode::Value(PhaseGVN*) const
+1448
+Function:::: JVMState::debug_start() const
+326
+Function:::: SafePointNode::Identity(PhaseGVN*)
+1414->1425->1444
+Function:::: JVMState::clone_deep(Compile*) const
+617->623
+617
+Function:::: StartNode::match(ProjNode const*, Matcher const*)
+82->90->103
+Function:::: CallRuntimeNode::calling_convention(BasicType*, VMRegPair*, unsigned int) const
+1291
+Function:::: CallNode::match(ProjNode const*, Matcher const*)
+726->730->768
+Function:::: StartOSRNode::osr_domain()
+110
+Function:::: ReturnNode::Ideal(PhaseGVN*, bool)
+179
+Function:::: JVMState::of_depth(int) const
+297
+Function:::: CallNode::match_edge(unsigned int) const
+772
+Function:::: SafePointNode::set_local(JVMState*, unsigned int, Node*)
+0->1371->1372
+Function:::: ParmNode::ideal_reg() const
+151
+151->161
+Function:::: ReturnNode::Value(PhaseGVN*) const
+183
+File:::: make/hotspot/src/hotspot/share/opto/mulnode.cpp
+Function:::: MulINode::Ideal(PhaseGVN*, bool)
+231->240->245->258->263->266->267->279
+Function:::: MulNode::hash() const
+45
+Function:::: AndINode::Identity(PhaseGVN*)
+488->493->495->498->499->506->517->518
+Function:::: URShiftINode::Identity(PhaseGVN*)
+1152->1179->1180
+Function:::: URShiftINode::Value(PhaseGVN*) const
+1265->1272->1277->1280->1286->1290->1292->1333
+Function:::: LShiftINode::Identity(PhaseGVN*)
+721
+Function:::: const_shift_count(PhaseGVN*, Node*, int*)
+690
+Function:::: maskShiftAmount(PhaseGVN*, Node*, int)
+699
+Function:::: MulNode::Value(PhaseGVN*) const
+195->203->205->207->211->222->223
+Function:::: MulNode::Identity(PhaseGVN*)
+51->53->56
+Function:::: AndINode::mul_ring(Type const*, Type const*) const
+463->481
+463->474->481
+Function:::: LShiftLNode::Ideal(PhaseGVN*, bool)
+845
+845->891
+Function:::: AndINode::Ideal(PhaseGVN*, bool)
+523
+Function:::: RShiftINode::Value(PhaseGVN*) const
+1038->1045->1050->1053->1061->1065->1069->1088
+Function:::: LShiftINode::Value(PhaseGVN*) const
+786->793->798->828
+786
+Function:::: RShiftINode::Identity(PhaseGVN*)
+944
+Function:::: URShiftINode::Ideal(PhaseGVN*, bool)
+1184
+Function:::: LShiftINode::Ideal(PhaseGVN*, bool)
+732->738->781
+Function:::: LShiftLNode::Value(PhaseGVN*) const
+896->938
+896->903->938
+Function:::: MulNode::Ideal(PhaseGVN*, bool)
+68->90->91->113->133->136->137->166->191
+Function:::: LShiftLNode::Identity(PhaseGVN*)
+834->839
+Function:::: RShiftINode::Ideal(PhaseGVN*, bool)
+973->1022->1023->1033
+File:::: src/hotspot/share/opto/classes.hpp
+Function:::: GotoNode::Opcode() const
+175
+Function:::: CallRuntimeNode::Opcode() const
+63
+Function:::: ProjNode::Opcode() const
+275
+Function:::: MachNode::Opcode() const
+207
+Function:::: LoadLNode::Opcode() const
+197
+Function:::: IfNode::Opcode() const
+178
+Function:::: StorePNode::Opcode() const
+324
+Function:::: ReturnNode::Opcode() const
+280
+Function:::: TailCallNode::Opcode() const
+337
+Function:::: ConINode::Opcode() const
+132
+Function:::: LoadNNode::Opcode() const
+201
+Function:::: SubINode::Opcode() const
+335
+Function:::: DecodeNNode::Opcode() const
+159
+Function:::: LoadVectorNode::Opcode() const
+415
+Function:::: MergeMemNode::Opcode() const
+226
+Function:::: ThreadLocalNode::Opcode() const
+340
+Function:::: LoadDNode::Opcode() const
+191
+Function:::: AddINode::Opcode() const
+36
+Function:::: LoadBNode::Opcode() const
+188
+Function:::: LShiftLNode::Opcode() const
+187
+Function:::: ConNode::Opcode() const
+127
+Function:::: LoadPNode::Opcode() const
+200
+Function:::: CastPPNode::Opcode() const
+73
+Function:::: DecodeNKlassNode::Opcode() const
+160
+Function:::: ConPNode::Opcode() const
+134
+Function:::: TailJumpNode::Opcode() const
+338
+Function:::: ConvI2LNode::Opcode() const
+144
+Function:::: ParmNode::Opcode() const
+267
+Function:::: ConLNode::Opcode() const
+133
+Function:::: LoadFNode::Opcode() const
+193
+Function:::: StartOSRNode::Opcode() const
+313
+Function:::: AddPNode::Opcode() const
+38
+Function:::: CheckCastPPNode::Opcode() const
+76
+Function:::: StartNode::Opcode() const
+312
+Function:::: IfFalseNode::Opcode() const
+180
+Function:::: Conv2BNode::Opcode() const
+135
+Function:::: IfTrueNode::Opcode() const
+181
+Function:::: MachProjNode::Opcode() const
+209
+Function:::: CmpPNode::Opcode() const
+96
+Function:::: BoolNode::Opcode() const
+48
+Function:::: LoadNKlassNode::Opcode() const
+196
+Function:::: URShiftINode::Opcode() const
+344
+Function:::: PhiNode::Opcode() const
+270
+Function:::: LoadRangeNode::Opcode() const
+202
+Function:::: RootNode::Opcode() const
+281
+Function:::: RShiftINode::Opcode() const
+276
+Function:::: CallStaticJavaNode::Opcode() const
+65
+Function:::: LoadINode::Opcode() const
+194
+Function:::: CastIINode::Opcode() const
+68
+Function:::: LoadUSNode::Opcode() const
+190
+Function:::: AndINode::Opcode() const
+41
+Function:::: CmpINode::Opcode() const
+92
+Function:::: LShiftINode::Opcode() const
+186
+Function:::: CmpUNode::Opcode() const
+97
+File:::: make/hotspot/src/hotspot/share/opto/castnode.cpp
+Function:::: CastIINode::Identity(PhaseGVN*)
+284->289->292->296
+Function:::: CastIINode::Ideal(PhaseGVN*, bool)
+213
+Function:::: CheckCastPPNode::Identity(PhaseGVN*)
+319->323->326->327->331->337
+Function:::: ConstraintCastNode::Value(PhaseGVN*) const
+51
+51->75
+Function:::: CheckCastPPNode::Value(PhaseGVN*) const
+342->378->424
+Function:::: CastIINode::Value(PhaseGVN*) const
+196
+Function:::: ConstraintCastNode::dominating_cast(PhaseGVN*, PhaseTransform*) const
+146->151->158->161->164->165->167->168->184
+146->158->161->164->165->167->168->184
+146->158->184
+Function:::: ConstraintCastNode::Identity(PhaseGVN*)
+38->42->45->46
+38->45->46
+38->45
+Function:::: ConstraintCastNode::Ideal(PhaseGVN*, bool)
+81
+File:::: make/hotspot/src/hotspot/share/opto/gcm.cpp
+Function:::: PhaseCFG::insert_anti_dependences(Block*, Node*, bool)
+588
+Function:::: Block::dom_lca(Block*)
+407
+407->413
+Function:::: Node_Backward_Iterator::Node_Backward_Iterator(Node*, VectorSet&, Node_Stack&, PhaseCFG&)
+895
+Function:::: raise_LCA_above_use(Block*, Node*, Node*, PhaseCFG const*)
+432
+Function:::: CFGLoop::compute_freq()
+0->1974
+Function:::: Node_Backward_Iterator::next()
+0
+Function:::: CFGLoop::scale_freq()
+0
+Function:::: memory_early_block(Node*, Block*, PhaseCFG const*)
+502->510->511->512->516
+502->511->512->516
+Function:::: Block::succ_fall_through(unsigned int)
+2114
+Function:::: PhaseCFG::schedule_pinned_nodes(VectorSet&)
+194->199->216->243->244->245->250
+Function:::: Block::num_fall_throughs()
+2062
+Function:::: PhaseCFG::global_code_motion()
+1493->1643
+Function:::: CFGLoop::compute_loop_depth(int)
+1893
+Function:::: PhaseCFG::create_loop_tree()
+0->1774->1776->1779->1780->1782->1817
+0
+0->1826
+0->1776->1779->1780->1782->1817
+Function:::: PhaseCFG::schedule_early(VectorSet&, Node_Stack&)
+310->353->378->386->399
+Function:::: PhaseCFG::do_global_code_motion()
+1647->1654->1658->1663
+Function:::: find_deepest_input(Node*, PhaseCFG const*)
+287
+Function:::: PhaseCFG::replace_block_proj_ctrl(Node*)
+79->81->85->101
+Function:::: Block::succ_prob(unsigned int)
+1979
+1979->1980->1982
+1979->1980->1982->1984->2002
+1979->2015
+Function:::: PhaseCFG::is_cheaper_block(Block*, Node*, unsigned int, unsigned int, double, int, bool)
+0
+Function:::: PhaseCFG::schedule_node_into_block(Node*, Block*)
+53->59->60->72
+Function:::: PhaseCFG::schedule_late(VectorSet&, Node_Stack&)
+1296->1301->1311->1317->1489
+Function:::: CFGLoop::update_succ_freq(Block*, double)
+2195
+Function:::: PhaseCFG::hoist_to_cheaper_block(Block*, Block*, Node*)
+1183->1184
+1183->1184->1185
+1183->1185
+1183->1185->1186->1198->1220->1221
+1183
+1183->1234->1242->1243->1244->1253
+1183->1185->1186->1220->1221->1234->1242->1243->1244->1253
+1183->1221
+Function:::: PhaseCFG::estimate_block_frequency()
+1673->1674->1676->1677->1682->1699->1753
+File:::: src/hotspot/share/opto/addnode.hpp
+Function:::: AddNode::AddNode(Node*, Node*)
+44
+Function:::: AddINode::AddINode(Node*, Node*)
+88
+Function:::: AddINode::min_opcode() const
+94
+Function:::: AddPNode::AddPNode(Node*, Node*, Node*)
+168
+Function:::: AddINode::bottom_type() const
+92
+Function:::: AddINode::max_opcode() const
+93
+Function:::: AddINode::add_id() const
+91
+File:::: make/hotspot/src/hotspot/share/opto/runtime.cpp
+Function:::: OptoRuntime::multianewarray_Type(int)
+500
+Function:::: OptoRuntime::complete_monitor_enter_Type()
+562
+Function:::: OptoRuntime::multianewarray5_Type()
+527
+Function:::: OptoRuntime::new_instance_Type()
+452
+Function:::: make_arraycopy_Type(ArrayCopyType)
+729->736
+729
+Function:::: OptoRuntime::uncommon_trap_Type()
+547
+Function:::: OptoRuntime::new_array_Type()
+483
+Function:::: OptoRuntime::multianewarrayN_Type()
+532
+Function:::: OptoRuntime::multianewarray4_Type()
+523
+Function:::: OptoRuntime::rethrow_Type()
+1458
+Function:::: OptoRuntime::generate(ciEnv*)
+133->140->141->142->143->144->145->146->147->148->149->150->152->153->156
+Function:::: OptoRuntime::generate_stub(ciEnv*, TypeFunc const* (*)(), unsigned char*, char const*, int, bool, bool)
+169->174
+Function:::: OptoRuntime::osr_end_Type()
+1220
+Function:::: OptoRuntime::multianewarray2_Type()
+515
+Function:::: OptoRuntime::register_finalizer_Type()
+1503
+Function:::: OptoRuntime::multianewarray3_Type()
+519
+Function:::: OptoRuntime::monitor_notify_Type()
+595
+Function:::: OptoRuntime::slow_arraycopy_Type()
+777
+File:::: make/hotspot/src/hotspot/share/opto/opaquenode.cpp
+Function:::: Opaque1Node::Identity(PhaseGVN*)
+39->45
+Function:::: Opaque1Node::hash() const
+31
+File:::: make/hotspot/src/hotspot/share/opto/convertnode.cpp
+Function:::: ConvI2LNode::Value(PhaseGVN*) const
+254->261
+254->257->261
+Function:::: Conv2BNode::Value(PhaseGVN*) const
+47
+Function:::: Compile::push_thru_add(PhaseGVN*, Node*, TypeInteger const*, TypeInteger const*&, TypeInteger const*&, BasicType)
+302
+302->371
+Function:::: ConvI2LNode::Identity(PhaseGVN*)
+267
+267->275
+Function:::: ConvI2LNode::Ideal(PhaseGVN*, bool)
+0->446->471
+0->471
+Function:::: Conv2BNode::Identity(PhaseGVN*)
+37
+File:::: make/hotspot/src/hotspot/share/opto/postaloc.cpp
+Function:::: PhaseChaitin::skip_copies(Node*)
+0
+0->222
+Function:::: PhaseChaitin::eliminate_copy_of_constant(Node*, Node*, Block*, Node_List&, Node_List&, int, int)
+363->393
+Function:::: PhaseChaitin::yank(Node*, Block*, Node_List*, Node_List*)
+82->88->91
+Function:::: PhaseChaitin::yank_if_dead_recurse(Node*, Node*, Block*, Node_List*, Node_List*)
+0
+Function:::: PhaseChaitin::post_allocate_copy_removal()
+0->584->585
+0->695->698->699->703->709->712
+0->648->650
+0->719->720->721->724->744->766->768->775
+0->795->796
+0->794->795->796
+0->724->730->731->735->738->791->792->794->795->796
+0->719->720->721->724->730->731->735->738->791
+0->528->529
+0->666
+0->549->557->558->567->568->571
+0->567->568
+0->648->650->663->695->698->703
+0->786->791
+0->586->589
+0->724->744->766->768->775
+0->780->781->782->791
+0->719->724->730->731->735->738->791
+0->719->724->730->731->735->738->791->792->794->795->796
+0->549->550->557->558->567->568->571
+0->724->730->731->735->738->791
+0->775
+0->695->698->699->703
+0->695->698->703
+0->568->571
+0->589
+0->803
+0->648->650->663->695->698->703->709->712
+0->539->567
+0->666->669->670
+0->648->650->663
+0
+0->719->724->744->766->768->775
+0->539
+0->663->695->698->703
+0->698->699->703
+0->663->695->698->703->709->712
+Function:::: PhaseChaitin::may_be_copy_of_callee(Node*) const
+46->76
+Function:::: PhaseChaitin::possibly_merge_multidef(Node*, unsigned int, Block*, GrowableArray<PhaseChaitin::RegDefUse>&)
+0
+Function:::: PhaseChaitin::use_prior_register(Node*, unsigned int, Node*, Block*, Node_List*, Node_List*)
+167->174->177->179->182->212
+Function:::: register_contains_value(Node*, int, int, Node_List const&)
+0->36
+Function:::: PhaseChaitin::merge_multidefs()
+0->407
+0->429
+0->409
+0->433
+0->411->412->413->422->423
+0->411->412->413
+0->410->411->412->413
+0->423
+0->410->411->412->413->422->423
+0->410->411->412->413->422->429
+0->410->429
+Function:::: PhaseChaitin::elide_copy(Node*, int, Block*, Node_List*, Node_List*, bool)
+0->257->262->270->271->350
+File:::: src/hotspot/share/opto/convertnode.hpp
+Function:::: ConvI2LNode::ConvI2LNode(Node*, TypeLong const*)
+149->150
+Function:::: Conv2BNode::Conv2BNode(Node*)
+36
+File:::: make/hotspot/src/hotspot/share/opto/bytecodeInfo.cpp
+Function:::: InlineTree::print_inlining(ciMethod*, int, ciMethod*, bool) const
+529->536->547->551
+Function:::: InlineTree::should_inline(ciMethod*, ciMethod*, int, ciCallProfile&)
+117
+Function:::: InlineTree::build_inline_tree_root()
+655->658->660
+Function:::: InlineTree::ok_to_inline(ciMethod*, JVMState*, ciCallProfile&, bool&)
+568->593->604
+Function:::: InlineTree::try_to_inline(ciMethod*, ciMethod*, int, JVMState*, ciCallProfile&, bool&)
+358->371->375->382->385->395->399->401->408->415->419->431->434->455->461->463->474
+Function:::: InlineTree::InlineTree(Compile*, InlineTree const*, ciMethod*, JVMState*, int, int)
+45->60->61->69->70->73
+Function:::: InlineTree::should_not_inline(ciMethod*, ciMethod*, JVMState*)
+0->205->209->211->216->226->231->255->262->267->275->287->294->295->300->307->312->320
+Function:::: InlineTree::find_subtree_from_root(InlineTree*, JVMState*, ciMethod*)
+670->687
+Function:::: InlineTree::pass_initial_checks(ciMethod*, int, ciMethod*)
+479->482->487->492->511
+Function:::: is_unboxing_method(ciMethod*, Compile*)
+110
+Function:::: InlineTree::is_not_reached(ciMethod*, ciMethod*, int, ciCallProfile&)
+323->326->349
+Function:::: InlineTree::build_inline_tree_for_callee(ciMethod*, JVMState*, int)
+0->633->638
+Function:::: InlineTree::check_can_parse(ciMethod*)
+516->518->519->520->522
+516->517->518->519->520->522
+Function:::: is_init_with_ea(ciMethod*, ciMethod*, Compile*)
+0
+File:::: make/hotspot/src/hotspot/share/opto/rootnode.cpp
+Function:::: HaltNode::HaltNode(Node*, Node*, char const*, bool)
+66->69->70->71->72->73->74
+Function:::: HaltNode::bottom_type() const
+76
+File:::: src/hotspot/share/opto/replacednodes.hpp
+Function:::: ReplacedNodes::ReplacedNode::operator==(ReplacedNodes::ReplacedNode const&)
+57
+File:::: make/hotspot/src/hotspot/share/opto/memnode.cpp
+Function:::: StoreNode::bottom_type() const
+2633
+Function:::: StoreNode::Ideal_sign_extended_input(PhaseGVN*, int)
+2850
+Function:::: LoadNKlassNode::Identity(PhaseGVN*)
+2499->2503->2507
+Function:::: StoreNode::Identity(PhaseGVN*)
+2750->2767->2776->2777->2779->2785->2810
+2750->2758->2766->2776->2777->2810
+Function:::: StoreNode::hash() const
+2642
+Function:::: StoreNode::Ideal_masked_input(PhaseGVN*, unsigned int)
+2832
+Function:::: LoadKlassNode::make(PhaseGVN&, Node*, Node*, Node*, TypePtr const*, TypeKlassPtr const*)
+2263->2269->2274
+Function:::: LoadUSNode::Ideal(PhaseGVN*, bool)
+2198->2207->2208
+Function:::: StoreNode::make(PhaseGVN&, Node*, Node*, Node*, TypePtr const*, Node*, BasicType, MemNode::MemOrd, bool)
+2599->2623->2629
+2599->2601->2629
+Function:::: LoadNode::Identity(PhaseGVN*)
+1207->1235->1261
+Function:::: MemNode::find_previous_store(PhaseTransform*)
+0
+0->791
+Function:::: MemNode::adr_type() const
+67->71->72
+Function:::: LoadNode::Value(PhaseGVN*) const
+0->1883->1885->1891->1977->2012->2084->2085->2086->2087->2088->2095->2108->2113->2114
+0->1885->1891->1993->2012->2084->2087->2088->2095->2108->2113->2114
+0->1885->1891->1977->2012->2084->2085->2086->2087->2088->2095->2108->2113->2114
+Function:::: MergeMemNode::hash() const
+4681
+Function:::: MemNode::find_array_copy_clone(PhaseTransform*, Node*, Node*) const
+603
+Function:::: LoadNKlassNode::Value(PhaseGVN*) const
+2488->2492->2493
+Function:::: LoadNode::bottom_type() const
+836
+Function:::: MemNode::check_if_adr_maybe_raw(Node*)
+75
+75->76
+Function:::: LoadNode::is_instance_field_load_with_local_phi(Node*)
+1187->1189->1192->1193
+1187->1189
+1187
+Function:::: StoreBNode::Ideal(PhaseGVN*, bool)
+2921->2928->2929
+Function:::: skip_through_membars(Compile::AliasType*, TypeInstPtr const*, bool)
+947->948->949->950
+Function:::: MemNode::calculate_adr_type(Type const*, TypePtr const*)
+801
+Function:::: LoadRangeNode::Value(PhaseGVN*) const
+2512
+Function:::: LoadNode::make(PhaseGVN&, Node*, Node*, Node*, TypePtr const*, Type const*, BasicType, MemNode::MemOrd, LoadNode::ControlDependency, bool, bool, bool, bool, unsigned char)
+896->909->922->925->928->931->933->934->938
+896->905->922->925->928->931->938
+Function:::: MergeMemNode::out_RegMask() const
+4881
+Function:::: LoadNode::hash() const
+943
+Function:::: LoadUSNode::Value(PhaseGVN*) const
+2211->2221->2222
+Function:::: MergeMemNode::grow_to_match(MergeMemNode const*)
+5025->5028
+5025->5029->5031
+5025
+Function:::: LoadNode::match_edge(unsigned int) const
+2119
+Function:::: LoadNode::klass_identity_common(PhaseGVN*)
+2425->2430->2434->2438->2445->2446->2461->2483
+Function:::: LoadNode::klass_value_common(PhaseGVN*) const
+2289->2291->2295->2299->2301->2329->2331->2332->2337->2348->2415
+Function:::: MemNode::can_see_stored_value(Node*, PhaseTransform*) const
+1034->1041->1053->1054->1055->1080->1089->1131->1152->1165->1166->1183
+1034->1131->1152->1165->1183
+Function:::: LoadNode::is_new_object_mark_load(PhaseGVN*) const
+1693
+Function:::: MergeMemNode::MergeMemNode(Node*)
+4650->4670->4672
+4650
+Function:::: MergeMemNode::memory_at(unsigned int) const
+4955->4959->4981
+4955->4981
+Function:::: LoadRangeNode::Identity(PhaseGVN*)
+2559->2588
+Function:::: LoadRangeNode::Ideal(PhaseGVN*, bool)
+2527->2554
+Function:::: StoreNode::Value(PhaseGVN*) const
+2736->2738->2740->2743
+2736->2740->2743
+Function:::: MergeMemNode::Ideal(PhaseGVN*, bool)
+4715->4864
+Function:::: LoadBNode::Ideal(PhaseGVN*, bool)
+2130->2140
+2130->2139->2140
+Function:::: LoadNode::Ideal(PhaseGVN*, bool)
+1714->1848
+Function:::: StoreNode::match_edge(unsigned int) const
+2816
+Function:::: MergeMemNode::set_base_memory(Node*)
+4868->4873->4874->4877
+4868->4873->4877
+Function:::: StoreNode::Ideal(PhaseGVN*, bool)
+2650->2669->2701->2702->2719->2731
+2650->2653->2701->2702->2719->2731
+Function:::: MergeMemNode::make(Node*)
+4677
+Function:::: LoadNode::find_previous_arraycopy(PhaseTransform*, Node*, Node*&, bool) const
+542->568->600
+542->600
+Function:::: MergeMemNode::Identity(PhaseGVN*)
+4690->4693->4694->4701
+4690->4693->4701
+Function:::: LoadNode::cmp(Node const&) const
+835
+Function:::: MemNode::Ideal_common(PhaseGVN*, bool)
+290->318->322->329->333->363->364->368->369->371->389->407
+290->293->295->297->318->322->329->333->363->368->369->371->389->407
+290->293->295->297->318->322->329->333->363->368->389->407
+Function:::: MergeMemNode::iteration_setup(MergeMemNode const*)
+0->5016->5017->5021
+0->5016->5021
+0->5005->5014->5015->5021
+Function:::: LoadBNode::Value(PhaseGVN*) const
+2143->2154
+2143->2153->2154
+Function:::: MergeMemNode::set_memory_at(unsigned int, Node*)
+4987->4997->4998
+File:::: src/hotspot/share/opto/opaquenode.hpp
+Function:::: Opaque1Node::Opaque1Node(Compile*, Node*)
+42
+Function:::: Opaque1Node::bottom_type() const
+54
+File:::: make/hotspot/src/hotspot/share/opto/machnode.cpp
+Function:::: MachNode::emit_size(PhaseRegAlloc*) const
+158
+Function:::: MachCallNode::bottom_type() const
+672
+Function:::: MachOper::disp_reloc() const
+61
+Function:::: MachOper::index_position() const
+59
+Function:::: MachNode::operand_index(unsigned int) const
+392->394
+392
+Function:::: MachCallNode::in_RegMask(unsigned int) const
+714->722
+Function:::: MachOper::reg(PhaseRegAlloc*, Node const*, int) const
+42
+Function:::: __cxx_global_var_init
+0
+Function:::: MachNode::in_RegMask(unsigned int) const
+198->209->214->216->219
+Function:::: MachNode::rematerialize() const
+451
+Function:::: MachNode::adr_type() const
+330->359->364->368->380->386->387
+Function:::: MachCallNode::returns_pointer() const
+705
+Function:::: MachNode::size(PhaseRegAlloc*) const
+150
+Function:::: MachNode::memory_inputs(Node*&, Node*&) const
+223->242->249
+Function:::: _GLOBAL__sub_I_machnode.cpp
+0
+Function:::: MachReturnNode::adr_type() const
+645
+Function:::: MachReturnNode::in_RegMask(unsigned int) const
+639
+Function:::: MachNode::get_base_and_disp(long&, TypePtr const*&) const
+0->314->324->325
+Function:::: MachNode::peephole(Block*, int, PhaseRegAlloc*, int&)
+433
+Function:::: MachOper::reg(PhaseRegAlloc*, Node const*) const
+38
+Function:::: MachProjNode::bottom_type() const
+588->590->593->594
+588->593->594
+588->598
+File:::: src/hotspot/share/opto/graphKit.hpp
+Function:::: GraphKit::root() const
+0->103
+Function:::: GraphKit::basic_plus_adr(Node*, long)
+308
+Function:::: GraphKit::argument(unsigned int) const
+498
+Function:::: GraphKit::find_int_con(Node*, int)
+120
+Function:::: GraphKit::create_and_map_if(Node*, Node*, float, float)
+894->895->898
+894->895->897->898
+Function:::: GraphKit::immutable_memory()
+515
+Function:::: GraphKit::env() const
+93
+Function:::: GraphKit::set_sp(int)
+149
+Function:::: GraphKit::pop()
+451
+Function:::: GraphKit::longcon(long) const
+107
+Function:::: GraphKit::too_many_recompiles(Deoptimization::DeoptReason)
+0
+Function:::: GraphKit::i_o() const
+493
+Function:::: GraphKit::ensure_stack(unsigned int)
+507
+Function:::: GraphKit::local(unsigned int) const
+496
+Function:::: GraphKit::makecon(Type const*) const
+115
+Function:::: GraphKit::map() const
+135
+Function:::: GraphKit::profile_has_unique_klass()
+416
+Function:::: GraphKit::null() const
+101
+Function:::: GraphKit::sp() const
+0
+138
+Function:::: GraphKit::jvms() const
+137
+Function:::: GraphKit::merged_memory()
+528
+Function:::: GraphKit::null_check(Node*, BasicType)
+370
+Function:::: GraphKit::push(Node*)
+450
+Function:::: GraphKit::method() const
+141
+Function:::: GraphKit::bci() const
+139
+Function:::: GraphKit::intcon(int) const
+106
+Function:::: GraphKit::record_for_igvn(Node*) const
+97
+Function:::: GraphKit::gvn() const
+94
+Function:::: GraphKit::set_map(SafePointNode*)
+148
+Function:::: GraphKit::peek(int)
+452
+Function:::: GraphKit::control() const
+492
+Function:::: GraphKit::map_not_null() const
+76
+Function:::: GraphKit::push_node(BasicType, Node*)
+479->480->483
+480
+Function:::: GraphKit::top() const
+102
+Function:::: GraphKit::stop()
+188
+Function:::: GraphKit::set_jvms(JVMState*)
+143
+Function:::: GraphKit::null_check_receiver_before_call(ciMethod*)
+699
+Function:::: GraphKit::has_exceptions() const
+136
+Function:::: GraphKit::set_control(Node*)
+502
+Function:::: GraphKit::frameptr() const
+495
+Function:::: GraphKit::create_and_xform_if(Node*, Node*, float, float)
+902
+Function:::: GraphKit::reexecute_sp()
+767
+Function:::: GraphKit::dec_sp(int)
+153
+Function:::: GraphKit::uncommon_trap(Deoptimization::DeoptReason, Deoptimization::DeoptAction, ciKlass*, char const*, bool, bool)
+753
+Function:::: GraphKit::inc_sp(int)
+152
+Function:::: GraphKit::failing() const
+184
+Function:::: GraphKit::zerocon(BasicType) const
+116
+Function:::: GraphKit::set_bci(int)
+154
+Function:::: GraphKit::set_argument(unsigned int, Node*)
+506
+Function:::: GraphKit::set_i_o(Node*)
+503
+Function:::: GraphKit::too_many_traps(Deoptimization::DeoptReason)
+773
+File:::: src/hotspot/share/opto/chaitin.hpp
+Function:::: LiveRangeMap::extend(unsigned int, unsigned int)
+367
+Function:::: LRG::Insert(int)
+138
+Function:::: LRG::Clear()
+135
+Function:::: LRG::set_mask_size(int)
+112
+Function:::: PhaseIFG::neighbors(unsigned int) const
+284
+Function:::: LRG::num_regs() const
+0
+0->153
+Function:::: PhaseChaitin::Pressure::check_pressure_at_fatproj(unsigned int, RegMask&)
+623
+Function:::: LiveRangeMap::uf_extend(unsigned int, unsigned int)
+371
+Function:::: PhaseIFG::neighbor_cnt(unsigned int) const
+272
+Function:::: LRG::reg_pressure() const
+179
+Function:::: LiveRangeMap::uf_live_range_id(unsigned int) const
+355
+Function:::: LRG::compute_mask_size() const
+109
+Function:::: PhaseIFG::lrgs(unsigned int) const
+294
+Function:::: PhaseChaitin::replace_and_yank_if_dead(Node*, int, Block*, Node_List&, Node_List&)
+721
+Function:::: LiveRangeMap::live_range_id(unsigned int) const
+347
+Function:::: LRG::clear_to_sets()
+140
+Function:::: PhaseChaitin::~PhaseChaitin()
+488
+Function:::: LRG::mask_is_nonempty_and_up() const
+99
+Function:::: PhaseChaitin::lrgs(unsigned int) const
+492
+Function:::: PhaseChaitin::merge_multidefs()
+0
+Function:::: LRG::is_float_or_vector() const
+102
+Function:::: LiveRangeMap::~LiveRangeMap()
+306
+Function:::: PhaseChaitin::Pressure::current_pressure() const
+596
+Function:::: LRG::alive() const
+219
+Function:::: LRG::Remove(int)
+139
+Function:::: LRG::degrees_of_freedom() const
+183
+Function:::: LRG::not_free() const
+189
+Function:::: LRG::compute_set_mask_size()
+125
+Function:::: LRG::mask() const
+131
+Function:::: LRG::SUBTRACT(RegMask const&)
+134
+Function:::: LiveRangeMap::uf_map(unsigned int, unsigned int)
+363
+Function:::: LRG::set_reg(int)
+76
+Function:::: PhaseChaitin::gather_lrg_masks(bool)
+0
+Function:::: LRG::AND(RegMask const&)
+133
+Function:::: LiveRangeMap::find(unsigned int)
+393
+393->394
+Function:::: LiveRangeMap::find(Node const*)
+399
+Function:::: LiveRangeMap::set_max_lrg_id(unsigned int)
+339
+Function:::: LRG::set_degree(unsigned int)
+85
+Function:::: LRG::reg() const
+0->75
+Function:::: PhaseChaitin::Pressure::high_pressure_index() const
+584
+Function:::: LRG::is_bound() const
+0
+Function:::: LiveRangeMap::LiveRangeMap(Arena*, unsigned int)
+376->377
+Function:::: LiveRangeMap::map(unsigned int, unsigned int)
+359
+Function:::: LRG::is_multidef() const
+220
+Function:::: LRG::set_mask(RegMask const&)
+132
+Function:::: LiveRangeMap::live_range_id(Node const*) const
+351
+Function:::: LRG::inc_degree(unsigned int)
+93
+Function:::: PhaseChaitin::Pressure::lower(LRG&, unsigned int&)
+560
+Function:::: LiveRangeMap::max_lrg_id() const
+335
+Function:::: LiveRangeMap::find_id(Node const*)
+380
+Function:::: LRG::set_num_regs(int)
+0
+Function:::: LiveRangeMap::size() const
+343
+Function:::: PhaseChaitin::Pressure::raise(LRG&)
+569->571
+569
+File:::: src/hotspot/share/opto/output.hpp
+Function:::: C2SafepointPollStubTable::~C2SafepointPollStubTable()
+75
+Function:::: PhaseOutput::set_in_scratch_emit_size(bool)
+227
+Function:::: PhaseOutput::safepoint_poll_table()
+0
+Function:::: PhaseOutput::scratch_buffer_blob()
+217
+Function:::: PhaseOutput::frame_size_in_bytes() const
+239
+File:::: src/hotspot/share/opto/regmask.hpp
+Function:::: RegMask::find_first_elem() const
+0->188
+Function:::: PhaseCFG::hoist_to_cheaper_block(Block*, Block*, Node*)
+0
+Function:::: RegMask::Member(int) const
+158
+Function:::: RegMaskIterator::RegMaskIterator(RegMask const&)
+384
+Function:::: RegMask::AND(RegMask const&)
+333->337->338->339
+Function:::: RegMask::RegMask()
+144
+Function:::: RegMask::OR(RegMask const&)
+320->322
+Function:::: RegMask::set_AllStack()
+0->169
+Function:::: RegMask::SUBTRACT(RegMask const&)
+346
+Function:::: find_lowest_bit(unsigned long)
+38
+Function:::: RegMask::Clear()
+280
+Function:::: RegMaskIterator::next()
+417->418->423->425
+417->423
+417->423->425
+Function:::: RegMask::is_NotEmpty() const
+176->179
+Function:::: RegMask::is_AllStack() const
+165
+Function:::: RegMask::Insert(int)
+303
+Function:::: RegMask::overlap(RegMask const&) const
+266->269->271
+Function:::: RegMask::Remove(int)
+0
+0->312
+Function:::: RegMask::can_represent_arg(int)
+0
+Function:::: RegMask::find_last_elem() const
+199
+Function:::: RegMask::RegMask(int)
+150
+Function:::: find_highest_bit(unsigned long)
+42
+File:::: make/hotspot/src/hotspot/share/opto/regmask.cpp
+Function:::: RegMask::is_bound(unsigned int) const
+216->219
+216
+Function:::: RegMask::is_vector(unsigned int)
+63
+Function:::: RegMask::clear_to_sets(unsigned int)
+258->269->282
+Function:::: RegMask::is_UP() const
+387->394
+Function:::: RegMask::is_bound1() const
+155->158->161
+Function:::: RegMask::find_first_set(LRG&, int) const
+247->250->254
+Function:::: _GLOBAL__sub_I_regmask.cpp
+0
+Function:::: RegMask::num_registers(unsigned int, LRG&)
+96
+Function:::: RegMask::is_misaligned_pair() const
+132
+Function:::: __cxx_global_var_init
+0
+Function:::: RegMask::Size() const
+400->403
+Function:::: RegMask::num_registers(unsigned int)
+68
+Function:::: RegMask::smear_to_sets(unsigned int)
+0->311
+Function:::: RegMask::is_bound_pair() const
+185->201
+Function:::: RegMask::is_aligned_pairs() const
+139->140->141->146
+139->141->146
+139
+Function:::: __cxx_global_var_init.5
+0
+Function:::: RegMask::clear_to_pairs()
+122->123->129
+File:::: make/hotspot/src/hotspot/share/opto/connode.cpp
+Function:::: ConNode::make(Type const*)
+47->48->67
+47->49->67
+47
+Function:::: ConNode::hash() const
+42
+File:::: make/hotspot/src/hotspot/share/opto/output.cpp
+Function:::: NonSafepointEmitter::flush_at_end()
+1229
+Function:::: PhaseOutput::need_stack_bang(int) const
+448
+Function:::: PhaseOutput::install()
+3393->3396->3405
+Function:::: C2SafepointPollStubTable::emit(CodeBuffer&)
+0
+Function:::: NonSafepointEmitter::observe_safepoint(JVMState*, int)
+1222
+Function:::: PhaseOutput::Output()
+0
+Function:::: PhaseOutput::frame_size_in_words() const
+3493
+Function:::: PhaseOutput::FillExceptionTables(unsigned int, unsigned int*, unsigned int*, Label*)
+1908
+Function:::: PhaseOutput::compute_loop_first_inst_sizes()
+478->480->481->504
+Function:::: PhaseOutput::init_scratch_buffer_blob(int)
+3302->3322->3325->3327
+Function:::: PhaseOutput::PhaseOutput()
+301
+Function:::: PhaseOutput::fill_buffer(CodeBuffer*, unsigned int*)
+0->1376->1390
+0->1429->1430
+0->1782
+0->1471->1474->1489->1491->1495->1504->1510->1566->1571->1626->1661->1670->1676->1677->1692->1698->1720->1733->1739
+0->1861->1867
+0
+0->1829->1830
+0->1471->1474->1489->1676->1677->1692->1698->1720->1739
+0->1803
+Function:::: PhaseOutput::shorten_branches(unsigned int*)
+0->543
+0
+0->565->567->584->593->601
+0->621
+0->565
+0->561
+0->701->716->729
+0->565->567->578->593->601
+0->664->665
+0->565->567->584->593->601->602
+Function:::: NonSafepointEmitter::observe_instruction(Node*, int)
+1193
+Function:::: PhaseOutput::perform_mach_node_analysis()
+336
+Function:::: PhaseOutput::bang_size_in_bytes() const
+3503
+Function:::: PhaseOutput::init_buffer()
+1313->1348->1353->1362
+Function:::: PhaseOutput::install_stub(char const*)
+3459
+Function:::: PhaseOutput::estimate_buffer_size(int&)
+1263->1309
+Function:::: PhaseOutput::~PhaseOutput()
+327->331
+Function:::: PhaseOutput::valid_bundle_info(Node const*)
+3485
+Function:::: PhaseOutput::scratch_emit_size(Node const*)
+3334->3387
+Function:::: PhaseOutput::Process_OopMap_Node(MachNode*, int)
+1013->1024->1030->1035
+1013->1053
+1013->1061->1068->1069->1074->1075->1088->1091
+1013->1151
+1013->1030->1035
+File:::: src/hotspot/share/opto/mulnode.hpp
+Function:::: MulNode::MulNode(Node*, Node*)
+44
+Function:::: MulINode::MulINode(Node*, Node*)
+89
+Function:::: AndINode::mul_id() const
+177
+Function:::: AndINode::AndINode(Node*, Node*)
+172
+Function:::: URShiftINode::URShiftINode(Node*, Node*)
+306
+Function:::: AndINode::add_id() const
+178
+Function:::: AndINode::max_opcode() const
+181
+Function:::: AndINode::min_opcode() const
+182
+Function:::: AndINode::mul_opcode() const
+180
+Function:::: AndINode::add_opcode() const
+179
+Function:::: LShiftLNode::bottom_type() const
+227
+File:::: make/hotspot/src/hotspot/share/opto/indexSet.cpp
+Function:::: IndexSet::IndexSet(IndexSet*)
+229
+Function:::: IndexSet::alloc_block()
+94
+Function:::: IndexSetIterator::advance_and_next()
+410->448
+Function:::: IndexSet::free_block(unsigned int)
+127
+Function:::: IndexSet::initialize(unsigned int, Arena*)
+284->296
+Function:::: IndexSet::populate_free_list()
+58->61->65
+Function:::: IndexSet::alloc_block_containing(unsigned int)
+112->117
+Function:::: IndexSet::lrg_union(unsigned int, unsigned int, unsigned int, PhaseIFG const*, RegMask const&)
+144->167->196
+144->177
+144->178->179->180->181->182
+144
+144->198->199->200->201->217
+144->178->179->180
+144->197
+144->196
+144->198->199->200->217
+Function:::: IndexSet::initialize(unsigned int)
+259->271
+Function:::: IndexSet::swap(IndexSet*)
+308

@@ -1,0 +1,10 @@
+public class TplClass2971 {
+
+    private static final void method(int a) throws Throwable {
+        for (int i = 0; i < 10; i++) {
+            int k = 3 * i + 5;
+            a += k;
+        }
+    }
+}
+

@@ -1,0 +1,12 @@
+EvoFuzz Artifact Evaluation
+Copyright 2026 the EvoFuzz-AE contributors.
+
+Original EvoFuzz and artifact integration code is licensed under Apache-2.0.
+Third-party components retain their own licenses, copyright notices, and
+attributions; the root LICENSE does not replace those terms.
+
+This artifact includes or adapts work from Artemis, MopFuzzer, JavaFuzzer,
+and libbacktrace. An OpenJDK build-file patch is supplied separately under
+the license of that upstream file. See THIRD_PARTY_NOTICES.md and the
+component license files for details. No endorsement by upstream authors
+is implied.

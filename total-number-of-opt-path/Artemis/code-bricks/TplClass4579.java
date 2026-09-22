@@ -1,0 +1,13 @@
+import java.lang.reflect.Array;
+
+public class TplClass4579 {
+
+    private static final void method() throws Throwable {
+        Object shortArray = Array.newInstance(Short.TYPE, 1);
+        Array.setShort(shortArray, 0, (short) -1);
+        if (Array.getInt(shortArray, 0) != -1) {
+        }
+        Short box = (Short) Array.get(shortArray, 0);
+    }
+}
+

@@ -1,0 +1,5 @@
+build/** linguist-generated
+jit-coverage/** linguist-documentation
+jit-tests/** linguist-documentation
+jdk-tests/** linguist-documentation
+librcov/** linguist-documentation

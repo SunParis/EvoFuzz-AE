@@ -1,0 +1,9 @@
+public class TplClass5896 {
+
+    private static final void method(int errors, java.lang.String s) throws Throwable {
+        int result = Integer.parseUnsignedInt(s);
+        // Should not reach here
+        errors++;
+    }
+}
+

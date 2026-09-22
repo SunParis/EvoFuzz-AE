@@ -1,0 +1,19 @@
+Statement:
+    $1 = $2.startsWith($3, $4);
+Var:
+    $1, $2, $3, $4
+Type:
+    // In this part: 
+    //   1 indicates that it can be either a variable or a constant.
+    //   2 indicates that it can only be a variable.
+    //   3 indicates that it can only be a constant. (e.g. 1, 2,"hello")
+    Type1:
+        $1: boolean, 2
+        $2: String, 2
+        $3: String, 1
+        $4: int, 1
+
+// 1(likely) - 20(unlikely), the default value is 3.
+Priority: 3
+
+

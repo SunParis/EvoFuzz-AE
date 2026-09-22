@@ -1,0 +1,48 @@
+# Machine-local settings and generated configurations.
+.local-env.sh
+.tmp/
+.deps/
+.gitmodules
+Config.yml
+artemi.yaml
+IGNORE_LIST*
+# Source downloads and build products are recreated by scripts/.
+/jvms/jdk*/
+/librcov/libbacktrace/build/
+target/
+build/
+dependency-reduced-pom.xml
+*.jar
+*.class
+*.o
+*.a
+*.so
+*.so.*
+*.la
+# Experiment outputs; original seed .score files ARE versioned.
+out/
+mutants/
+mut_seed_data/
+new_seeds/
+results/
+*.log
+*.err
+*.db
+*.db-*
+*.sqlite*
+*.gcda
+*.gcno
+*.info
+*.pdf
+path_rec*.txt
+hs_err_pid*
+core
+core.*
+# Editor and interpreter state.
+.idea/
+.vscode/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.gradle/

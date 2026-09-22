@@ -1,0 +1,64 @@
+project_home: ${AE_ROOT}/total-number-of-opt-path/EvoFuzz-Rand
+run_java_home: ${AE_JDK21}
+test_java_home: ${AE_ROOT}/jvms/jdk17u/build/release/jdk/
+test_java_args: --add-modules jdk.incubator.vector
+verified_java_home: ${AE_JDK17}
+additional_java_lib_paths: ${AE_ROOT}/total-number-of-opt-path/EvoFuzz-Rand/java_fuzzer/lib
+skip_bug_detection: false
+threads: 16
+total_test_num: 50000000000000
+total_test_time:
+  days: 0
+  hours: 12
+  minutes: 20
+timed_out: 1200
+save_success: true
+output_dir: ${AE_ROOT}/total-number-of-opt-path/EvoFuzz-Rand/out
+allfuzzer:
+  jar_path: ${AE_ROOT}/total-number-of-opt-path/EvoFuzz-Rand/allfuzzer/AllFuzzer-1.0-SNAPSHOT.jar
+  code_bricks_dir: ${AE_ROOT}/total-number-of-opt-path/EvoFuzz-Rand/cbs
+  max_statements: 6
+  max_array_length: 80
+  insert_in_order: true
+  insert_in_one_point: true
+seed_generator:
+  possiblity_of_new_seed: 0
+seed_mutator_select:
+  statistics_dir: ${AE_ROOT}/total-number-of-opt-path/EvoFuzz-Rand/mut_seed_data
+  mutator_dir:
+    structure_mutator_dir: ${AE_ROOT}/total-number-of-opt-path/EvoFuzz-Rand/cbs/structures
+    statement_mutator_dir: ${AE_ROOT}/total-number-of-opt-path/EvoFuzz-Rand/cbs
+    essential_mutator_dir: ${AE_ROOT}/total-number-of-opt-path/EvoFuzz-Rand/cbs/essential
+  seed_dir: ${AE_ROOT}/total-number-of-opt-path/EvoFuzz-Rand/seeds
+  mut_select_num:
+    structure_mutator_select_num:
+      max_num: 3
+      min_num: 3
+    statement_mutator_select_num:
+      max_num: 4
+      min_num: 2
+  mutator_priority_adjustment:
+    initial_priority: 100.0
+    unsafe_initial_priority: 30.0
+    new_bugs: 200
+    new_code_paths: 200
+    new_code_diff: 300
+    new_code_lines: 20
+    nothing: 10
+    run_failed: 1
+    timed_out: 2
+  seed_priority_adjustment:
+    initial_priority: 100.0
+    new_bugs: 200
+    new_code_paths: 200
+    new_code_diff: 300
+    new_code_lines: 20
+    nothing: 10
+    run_failed: 1
+    timed_out: 2
+path_coverage:
+  test_java_home: ${AE_ROOT}/jvms/jdk17u-clang/build/rcov-release/jdk
+  data_base_path: ${AE_ROOT}/total-number-of-opt-path/EvoFuzz-Rand/out/rcov.db
+  timed_out: 1200
+  focus_files:
+  - opto

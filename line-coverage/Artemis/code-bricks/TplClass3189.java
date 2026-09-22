@@ -1,0 +1,9 @@
+public class TplClass3189 {
+
+    private static final void method(java.lang.Thread[] sThreads) throws Throwable {
+        for (int i = 0; i < 10; i++) {
+            sThreads[i].join();
+        }
+    }
+}
+

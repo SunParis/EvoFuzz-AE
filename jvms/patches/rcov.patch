@@ -1,0 +1,37 @@
+Adapted for EvoFuzz-AE: C2 path instrumentation and a relocatable runtime path.
+SPDX-License-Identifier: GPL-2.0-only WITH Classpath-exception-2.0
+Original: Copyright (c) 2013, 2023, Oracle and/or its affiliates. All rights reserved.
+This patch follows the GPLv2 with Classpath exception notice in CompileJvm.gmk.
+The original file retains its Oracle copyright and GPL notice.
+
+diff --git a/make/hotspot/lib/CompileJvm.gmk b/make/hotspot/lib/CompileJvm.gmk
+--- a/make/hotspot/lib/CompileJvm.gmk
++++ b/make/hotspot/lib/CompileJvm.gmk
+@@ -137,6 +137,18 @@
+ 
+ # This source set is reused so save in cache.
+ $(call FillFindCache, $(JVM_SRC_DIRS))
++
++# Modified for EvoFuzz-AE: trace C2 basic-block paths using librcov.
++SANITIZE_COV_FLAGS := -fno-omit-frame-pointer
++SANITIZE_COV_FLAGS += -fsanitize-coverage=trace-pc-guard,bb,no-prune
++SANITIZE_COV_FLAGS += -fno-lto -g -O3
++LCOV_DYN_LIB := $(TOPDIR)/../../librcov/lib/librcov.so
++OPTO_SRC_DIR := $(TOPDIR)/src/hotspot/share/opto
++OPTO_CPP_FILES := $(notdir $(wildcard $(OPTO_SRC_DIR)/*.cpp))
++OPTO_ALL_FILES := $(OPTO_CPP_FILES)
++$(foreach f, $(OPTO_ALL_FILES), \
++  $(eval BUILD_LIBJVM_$f_CXXFLAGS := $(SANITIZE_COV_FLAGS)) \
++)
+ 
+ ################################################################################
+ # Now set up the actual compilation of the main hotspot native library
+@@ -193,7 +205,7 @@
+     DISABLED_WARNINGS_microsoft := $(DISABLED_WARNINGS_microsoft), \
+     ASFLAGS := $(JVM_ASFLAGS), \
+     LDFLAGS := $(JVM_LDFLAGS), \
+-    LIBS := $(JVM_LIBS), \
++    LIBS := $(JVM_LIBS) $(LCOV_DYN_LIB), \
+     OPTIMIZATION := $(JVM_OPTIMIZATION), \
+     OBJECT_DIR := $(JVM_OUTPUTDIR)/objs, \
+     MAPFILE := $(JVM_MAPFILE), \

@@ -1,0 +1,9 @@
+public class TplClass2002 {
+
+    private static final void method(float[] a0) throws Throwable {
+        for (int i = 0; i < a0.length; i += 1) {
+            a0[i] = (float) (i & 3);
+        }
+    }
+}
+

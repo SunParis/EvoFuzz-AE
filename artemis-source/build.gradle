@@ -1,0 +1,64 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
+    id 'java'
+}
+
+group 'io.artemis'
+version '0.1.0'
+
+repositories {
+    mavenCentral()
+}
+
+compileJava {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'io.artemis.Artemis'
+    }
+}
+
+// Creating a zip archive including only the artemis
+// jar binary and the testing scripts inside scripts
+task archiveArtemis(type: Zip) {
+    dependsOn shadowJar
+
+    description = "Archive Artemis and the artemi framework"
+    archiveFileName = "artemis-${project.version}.zip"
+
+    exclude '**/.idea'
+
+    from("$project.rootDir") {
+        include 'LICENSE'
+        include 'README.md'
+    }
+
+    from("$buildDir/libs") {
+        //noinspection GroovyAssignabilityCheck
+        include shadowJar.archiveFileName.get()
+        rename shadowJar.archiveFileName.get(), "artemis.jar"
+    }
+
+    from('artemi') {
+        include 'java_fuzzer/**'
+        include 'jfuzz/**'
+        include 'requirements.txt'
+        include 'runner.py', 'jvm.py', 'utils.py'
+        include 'artemi.py', 'artemi.yaml', 'artemi.ex.yaml'
+    }
+}
+
+dependencies {
+    implementation 'fr.inria.gforge.spoon:spoon-core:10.1.1'
+    // Add the following to resolve "Failed to load class org.slf4j.impl.StaticLoggerBinder"
+    implementation 'org.slf4j:slf4j-simple:1.7.36'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+}
+
+test {
+    useJUnitPlatform()
+}

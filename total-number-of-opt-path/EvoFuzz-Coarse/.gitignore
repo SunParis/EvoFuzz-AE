@@ -1,0 +1,9 @@
+# Local build and experiment output only.
+__pycache__/
+*.pyc
+*.class
+*.jar
+/target/
+/build/
+/out/
+/mutants/

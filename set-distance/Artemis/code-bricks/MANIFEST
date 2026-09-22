@@ -1,0 +1,6 @@
+InitzCount=2346
+CbCount=7823
+# Let's temporarily disable (TODO Fix them)
+# - all Timer related bricks: since they may block the execution
+# - all Thread related bricks: since they may induce insufficient memory when creating too many threads
+CbBlacklist=5436,5426,5432,5430,5435,5422,5421,5431,5425,5427,1620,1925,2834,3187,3197,3198,5422,6065,6066,6071,6072,6073,6075,6076,6077,6078,6375,6402,6404,6629,6678,6680,6682,6691,6704,6720,6918,6924,6925

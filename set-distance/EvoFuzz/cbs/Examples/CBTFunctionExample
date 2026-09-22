@@ -1,0 +1,34 @@
+Import:
+    import java.util.zip.Checksum;
+    import java.util.zip.CRC32;
+Function:
+    CRC32.update
+    CRC32.getvalue
+Statement:
+    Checksum $1 = new CRC32();
+    $3 = $2.getBytes();
+    $1.update($3, $4, $5);
+    $6 = $1.getValue();
+Var:
+    $1, $2, $3, $4, $5
+Type:
+    // In this part: 
+    //   null indicates that the variable does not require prior declaration.
+    //   1 indicates that it can be either a variable or a constant.
+    //   2 indicates that it can only be a variable.
+    //   3 indicates that it can only be a constant. (e.g. 1, 2,"hello")
+    Type1:
+        $1: null, 2
+        $2: String, 2
+        $3: byte[], 2
+        $4: int, 1
+        $5: int, 1
+        $6: length, 2
+Limition:
+    $3: !null
+    $4: [0,$3.length]
+    $5: [0,$3.length - $4]
+// 1(likely) - 20(unlikely), the default value is 3.
+Priority: 3
+
+

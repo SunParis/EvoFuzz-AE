@@ -1,0 +1,13 @@
+public class TplClass1421 {
+
+    private static final void method(byte[] a1, int[] p4) throws Throwable {
+        for (int i = 0; i < p4.length; i += 1) {
+            int l0 = (int) a1[i * 4 + 0];
+            int l1 = (int) a1[i * 4 + 1];
+            int l2 = (int) a1[i * 4 + 2];
+            int l3 = (int) a1[i * 4 + 3];
+            p4[i] = (l3 & 0xFF) | ((l2 & 0xFF) << 8) | ((l1 & 0xFF) << 16) | ((l0 & 0xFF) << 24);
+        }
+    }
+}
+

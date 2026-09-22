@@ -1,0 +1,174 @@
+
+/**
+ * This is a simple example Java class to be used in EvoFuzz as code bricks.
+ * You can define global variables, functions to be inserted, mutators,
+ *      and functions to create new values in this class.
+ * The naming conventions are described in the comments below.
+ */
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////// If imports are needed, you can add them here. /////////////////////
+
+import java.util.Random;
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+public class Example {
+    
+    ////////////////////////// Priority of this code brick. /////////////////////////////
+    
+    // Priority of this code brick (1(likely) - 100(unlikely)).
+    // If not defined, the default priority is 50.
+    
+    public static int $priority = 50;
+
+    /////////////////////////////////////////////////////////////////////////////////////
+    
+    /////////////////// Global variables can be defined as below. //////////////////////
+    
+    // The name should start with '$gbvar' to let EvoFuzz recognize it.
+    // `public` or `private` does not matter.
+    public static int $gbvar;
+
+    /////////////////////////////////////////////////////////////////////////////////////
+    
+    ///////// Functs to be inserted into the host code can be defined as below. /////////
+    
+    // The name should can be in any type, as long as it does not start with '$mut', '$new', '$init' or '$check'.
+    // Overloaded functions with the same name are NOT allowed.
+    // These functions will be inserted into the host code as new functions,
+    //      and will be called by the host code.
+    // Parameters can also be in any type and name.
+    // `public` or `private` does not matter.
+
+    /////////////////////////////////////////////////////////////////////////////////////
+    
+    public static void say_hello(String name) {
+        System.out.println("Hello, " + name + "!");
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////
+    
+    ///////// Mutators to be used for mutation testing can be defined as below. /////////
+    
+    // The name should start with '$mut' to let EvoFuzz recognize it.
+    // This functions will be used to replace some exprs or stmts in the host code,
+    //      instead of purely calling them.
+    // Parameters can start with '$expr', '$lval' or '$const':
+    //      - `$expr` means expression parameters,
+    //      - `$lval` means lvalue parameters (can be assigned).
+    //      - `$const` means constant (will be replaced with random values)
+    // If return type is void, it means the mutator replaces a statement,
+    //      otherwise it replaces an expression.
+    // If a mutator replaces a statement, it can also call `$stmt()` to represent
+    //      the original statement being replaced.
+    // You can define variables of any type in these functions by names starting with '$tmp'
+    //      to avoid name conflicts, EvoFuzz will rename them with unique names when generating code.
+    // You can call other functions defined in this class in these mutators.
+    // `public` or `private` does not matter.
+
+    /////////////////////////////////////////////////////////////////////////////////////
+    
+    public static int $mut1(int $expr1, int $expr2) {
+        return (($expr1) + (($expr2) * $gbvar));
+    }
+
+    public static void $mut2(int $lval1, int $expr1, int $expr2) {
+        $lval1 = $expr1 + $expr2 + $gbvar;
+        System.out.println("$lval1: " + $lval1);
+    }
+
+    public static void $mut3(int $lval1, int $expr1, int $expr2) {
+        say_hello("EvoFuzz");
+        do {
+            $lval1 = $lval1 + 1;
+            $stmt();
+        } while ($lval1 < ($expr1 + $expr2 + $gbvar));
+        int $tmp11 = $expr1 + $expr2 + $gbvar;
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////
+
+    ////////////// Functions to create new values can be defined as below. //////////////
+    
+    // The name should start with '$new' to let EvoFuzz recognize as a allocator;
+    //      start with '$init' to let EvoFuzz recognize as an initializer;
+    //      start with '$check' to let EvoFuzz recognize as a checker.
+    // These functions will be used to create new values for variables in the host code.
+    // In `$new` functions, parameters should be empty.
+    // In `$init` functions, parameters should start with '$lval' (the var to be initialized).
+    // In `$check` functions, parameters should start with '$lval' (the var to be checked).
+    // `public` or `private` does not matter.
+    
+    //////////////////////////////////////////////////////////////////////////////////////
+
+    public static Integer $new1(/*should be empty*/) {
+        return new Integer(10);
+    }
+
+    public static int $new2(/*should be empty*/) {
+        return 12345;
+    }
+
+    public static void $init1(int $lval) {
+        System.out.println("$init::$lval: " + $lval);
+    }
+
+    public static void $init2(int[] $lval) {
+        for (int tttttmpi = 0; tttttmpi < $lval.length; tttttmpi++) {
+            $lval[tttttmpi] = tttttmpi * 10;
+        }
+    }
+
+    public static void $check1(Integer $lval) {
+        System.out.println("$lval: " + $lval);
+    }
+
+    public static void $check2(int[] $lval) {
+        for (int tttttmpi = 0; tttttmpi < $lval.length; tttttmpi++) {
+            System.out.println("$lval[" + tttttmpi + "]: " + $lval[tttttmpi]);
+        }
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////
+
+    /**
+     * The order of methods and variables in this class does not matter.
+     * EvoFuzz will recognize them by their name prefixes.
+     */
+
+    //////////////////////////////////////////////////////////////////////////////////////
+
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+// If you need to define more classes, you can add them here.
+// The class name should be prefixed with '$cls' and not naming just '$cls'.
+// The content of these classes can be anything.
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+class $clsA {
+    
+    class innerclass {
+        int b;
+    }
+    
+    public int value;
+
+    public $clsA(int v) {
+        this.value = v;
+    }
+
+    public void display() {
+        System.out.println("Value: " + this.value);
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+

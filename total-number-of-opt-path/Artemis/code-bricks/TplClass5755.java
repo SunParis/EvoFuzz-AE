@@ -1,0 +1,19 @@
+import java.io.FileOutputStream;
+import java.text.DecimalFormatSymbols;
+import java.io.ObjectOutputStream;
+
+public class TplClass5755 {
+
+    private static final void method() throws Throwable {
+        try {
+            DecimalFormatSymbols dfs = new DecimalFormatSymbols();
+            dfs.setCurrencySymbol("*SpecialCurrencySymbol*");
+            FileOutputStream ostream = new FileOutputStream("DecimalFormatSymbols.142");
+            ObjectOutputStream p = new ObjectOutputStream(ostream);
+            p.writeObject(dfs);
+            ostream.close();
+        } catch (Exception e) {
+        }
+    }
+}
+

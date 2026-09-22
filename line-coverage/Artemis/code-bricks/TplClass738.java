@@ -1,0 +1,10 @@
+public class TplClass738 {
+
+    private static final void method(java.lang.Double j2, java.lang.Double ibc, java.lang.Double j1) throws Throwable {
+        for (int i = 0; i < 1000; i++) {
+            j1 = j1 + ibc;
+            j2 = j2 + 2.;
+        }
+    }
+}
+

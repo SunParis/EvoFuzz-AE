@@ -1,0 +1,18 @@
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
+import java.util.zip.ZipOutputStream;
+
+public class TplClass6465 {
+
+    private static final void method(byte[] buffer, java.util.zip.ZipInputStream in, java.util.zip.ZipOutputStream out) throws Throwable {
+        for (ZipEntry ze; (ze = in.getNextEntry()) != null; ) {
+            out.putNextEntry(ze);
+            // When the bug is present, it shows up here.  The second call to
+            // copyZip will throw an exception while reading data.
+            for (int nr; 0 < (nr = in.read(buffer)); ) {
+                out.write(buffer, 0, nr);
+            }
+        }
+    }
+}
+
