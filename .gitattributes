@@ -1,0 +1,8 @@
+artemis-source/** linguist-generated
+jvms/** linguist-generated
+librcov/** linguist-generated
+line-coverage/** linguist-generated
+mopfuzzer-source/** linguist-generated
+scripts/** linguist-generated
+set-distance/** linguist-generated
+total-number-of-opt-path/** linguist-generated
